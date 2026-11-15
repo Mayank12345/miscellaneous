@@ -1,0 +1,380 @@
+[
+ {
+  "name": "The question",
+  "beats": [
+   {
+    "text": "Find a comfortable way to sit. This will take about ten minutes. There is nothing to get right.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m1-b1.mp3",
+    "dur": 6.12
+   },
+   {
+    "text": "Long ago, a king named Janaka sat before a twelve-year-old sage, and asked him three questions.",
+    "hold": 1.5,
+    "kind": "say",
+    "audio": "exp/m1-b2.mp3",
+    "dur": 6.72
+   },
+   {
+    "text": "How is wisdom found? How does freedom come? How do I let go?",
+    "hold": 2.5,
+    "kind": "say",
+    "audio": "exp/m1-b3.mp3",
+    "dur": 4.69
+   },
+   {
+    "text": "Tonight, you sit where the king sat. Ask yourself, honestly: what do I want to be free of?",
+    "hold": 10,
+    "kind": "say",
+    "audio": "exp/m1-b4.mp3",
+    "dur": 5.86
+   }
+  ],
+  "verse": {
+   "ref": "1.1",
+   "dev": "कथं ज्ञानमवाप्नोति कथं मुक्तिर्भविष्यति।<br>वैराग्यं च कथं प्राप्तमेतद् ब्रूहि मम प्रभो॥",
+   "iast": "kathaṃ jñānam avāpnoti kathaṃ muktir bhaviṣyati | vairāgyaṃ ca kathaṃ prāptam etad brūhi mama prabho ||",
+   "en": "How is knowledge gained? How does freedom come? How is letting go reached? Tell me this, master.",
+   "intro": "The king's words:",
+   "audio": "exp/m1-v.mp3",
+   "dur": 6.86
+  }
+ },
+ {
+  "name": "Not this",
+  "beats": [
+   {
+    "text": "The sage did not hand the king a practice. He pointed. Let's do what he did.",
+    "hold": 1.5,
+    "kind": "say",
+    "audio": "exp/m2-b1.mp3",
+    "dur": 5.22
+   },
+   {
+    "text": "Look at your hand.",
+    "hold": 4,
+    "kind": "say",
+    "audio": "exp/m2-b2.mp3",
+    "dur": 1.92
+   },
+   {
+    "text": "You can see it. Your hand is seen. So who is doing the seeing?",
+    "hold": 6,
+    "kind": "say",
+    "audio": "exp/m2-b3.mp3",
+    "dur": 4.39
+   },
+   {
+    "text": "Now feel your breath. The breath is felt. So who is feeling it?",
+    "hold": 6,
+    "kind": "say",
+    "audio": "exp/m2-b4.mp3",
+    "dur": 4.33
+   },
+   {
+    "text": "Whatever you can notice, you are the one who notices it.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m2-b5.mp3",
+    "dur": 4.07
+   }
+  ],
+  "verse": {
+   "ref": "1.3",
+   "dev": "न पृथ्वी न जलं नाग्निर्न वायुर्द्यौर्न वा भवान्।<br>एषां साक्षिणमात्मानं चिद्रूपं विद्धि मुक्तये॥",
+   "iast": "na pṛthvī na jalaṃ nāgnir na vāyur dyaur na vā bhavān | eṣāṃ sākṣiṇam ātmānaṃ cidrūpaṃ viddhi muktaye ||",
+   "en": "You are not earth, water, fire, air or sky. To be free, know yourself as awareness, the witness of all these.",
+   "intro": "And the sage said:",
+   "audio": "exp/m2-v.mp3",
+   "dur": 8.42
+  }
+ },
+ {
+  "name": "The witness",
+  "beats": [
+   {
+    "text": "After this sentence, close your eyes, and listen for the furthest sound you can hear.",
+    "hold": 12,
+    "kind": "say",
+    "audio": "exp/m3-b1.mp3",
+    "dur": 5.54
+   },
+   {
+    "text": "The sound came to you. You did not have to make the hearing happen. It simply happens, in you.",
+    "hold": 2,
+    "kind": "say",
+    "audio": "exp/m3-b2.mp3",
+    "dur": 6.05
+   },
+   {
+    "text": "Now, instead of the sound, notice the listening itself. The quiet space in which every sound appears.",
+    "hold": 9,
+    "kind": "say",
+    "audio": "exp/m3-b3.mp3",
+    "dur": 6.76
+   },
+   {
+    "text": "That space has no edges. It was here before the sound, and it is here after it.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m3-b4.mp3",
+    "dur": 5.44
+   }
+  ],
+  "verse": {
+   "ref": "1.7",
+   "dev": "एको द्रष्टासि सर्वस्य मुक्तप्रायोऽसि सर्वदा।<br>अयमेव हि ते बन्धो द्रष्टारं पश्यसीतरम्॥",
+   "iast": "eko draṣṭāsi sarvasya muktaprāyo'si sarvadā | ayam eva hi te bandho draṣṭāraṃ paśyasītaram ||",
+   "en": "You are the one seer of everything, and always free. Your only bondage is this: you take the seer to be something else.",
+   "intro": "The sage said:",
+   "audio": "exp/m3-v.mp3",
+   "dur": 8.1
+  }
+ },
+ {
+  "name": "A thought passes",
+  "beats": [
+   {
+    "text": "Now wait for a thought to appear. Any thought at all. When you notice one, tap the screen.",
+    "hold": 0,
+    "kind": "tap",
+    "audio": "exp/m4-b1.mp3",
+    "dur": 5.71
+   },
+   {
+    "text": "There it was. Now watch where it goes.",
+    "hold": 8,
+    "kind": "say",
+    "audio": "exp/m4-b2.mp3",
+    "dur": 3.43
+   },
+   {
+    "text": "The thought came, and the thought went. Did you come and go with it?",
+    "hold": 6,
+    "kind": "say",
+    "audio": "exp/m4-b3.mp3",
+    "dur": 4.33
+   },
+   {
+    "text": "Thoughts are like weather. You are like the sky the weather moves through.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m4-b4.mp3",
+    "dur": 4.58
+   }
+  ],
+  "verse": {
+   "ref": "1.4",
+   "dev": "यदि देहं पृथक्कृत्य चिति विश्राम्य तिष्ठसि।<br>अधुनैव सुखी शान्तो बन्धमुक्तो भविष्यसि॥",
+   "iast": "yadi dehaṃ pṛthak kṛtya citi viśrāmya tiṣṭhasi | adhunaiva sukhī śānto bandhamukto bhaviṣyasi ||",
+   "en": "If you set the body aside and simply rest in awareness, right now you will be happy, at peace, and free.",
+   "intro": "The sage said:",
+   "audio": "exp/m4-v.mp3",
+   "dur": 7.46
+  }
+ },
+ {
+  "name": "Aho!",
+  "beats": [
+   {
+    "text": "When Janaka heard this, something in him turned around. He did not learn a new idea. He recognised what had always been there.",
+    "hold": 1.5,
+    "kind": "say",
+    "audio": "exp/m5-b1.mp3",
+    "dur": 7.85
+   },
+   {
+    "text": "And he cried out: Aho! How wonderful!",
+    "hold": 2.5,
+    "kind": "say",
+    "audio": "exp/m5-b2.mp3",
+    "dur": 3.56
+   },
+   {
+    "text": "Look now, while these words appear. Is anything missing from the simple fact of being aware?",
+    "hold": 9,
+    "kind": "say",
+    "audio": "exp/m5-b3.mp3",
+    "dur": 6.12
+   },
+   {
+    "text": "Nothing to add. Nothing to fix. It was never touched.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m5-b4.mp3",
+    "dur": 4.18
+   }
+  ],
+  "verse": {
+   "ref": "2.1",
+   "dev": "अहो निरञ्जनः शान्तो बोधोऽहं प्रकृतेः परः।<br>एतावन्तमहं कालं मोहेनैव विडम्बितः॥",
+   "iast": "aho nirañjanaḥ śānto bodho'haṃ prakṛteḥ paraḥ | etāvantam ahaṃ kālaṃ mohenaiva viḍambitaḥ ||",
+   "en": "Wonder! I am spotless, at peace, pure awareness, beyond nature. All this time I have been fooled.",
+   "intro": "The king said:",
+   "audio": "exp/m5-v.mp3",
+   "dur": 7.1
+  }
+ },
+ {
+  "name": "The test",
+  "beats": [
+   {
+    "text": "But the sage did not let the king off easily. He asked: if you know this, why do you still grab, and fear, and want?",
+    "hold": 1.5,
+    "kind": "say",
+    "audio": "exp/m6-b1.mp3",
+    "dur": 7.16
+   },
+   {
+    "text": "Let's be honest too. Bring to mind one real worry. A small one is fine.",
+    "hold": 8,
+    "kind": "say",
+    "audio": "exp/m6-b2.mp3",
+    "dur": 5.09
+   },
+   {
+    "text": "Watch what the mind does with it. Does it want something? Push something away? Replay it? Hold on?",
+    "hold": 9,
+    "kind": "say",
+    "audio": "exp/m6-b3.mp3",
+    "dur": 6.12
+   },
+   {
+    "text": "That grabbing and pushing, the sage said, is the whole of bondage. Not the situation. The grip.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m6-b4.mp3",
+    "dur": 6.33
+   }
+  ],
+  "verse": {
+   "ref": "8.1",
+   "dev": "तदा बन्धो यदा चित्तं किञ्चिद्वाञ्छति शोचति।<br>किञ्चिन्मुञ्चति गृह्णाति किञ्चिद्धृष्यति कुप्यति॥",
+   "iast": "tadā bandho yadā cittaṃ kiñcid vāñchati śocati | kiñcin muñcati gṛhṇāti kiñcid dhṛṣyati kupyati ||",
+   "en": "It is bondage when the mind wants something, grieves over something, rejects something, holds on to something, is thrilled or angered by something.",
+   "intro": "The sage said:",
+   "audio": "exp/m6-v.mp3",
+   "dur": 9.87
+  }
+ },
+ {
+  "name": "No one holding",
+  "beats": [
+   {
+    "text": "Keep the worry where it is. Don't push it away. Just notice: who is holding it?",
+    "hold": 7,
+    "kind": "say",
+    "audio": "exp/m7-b1.mp3",
+    "dur": 5.35
+   },
+   {
+    "text": "Look for the one who is worried. Not the worry. The one who has it.",
+    "hold": 9,
+    "kind": "say",
+    "audio": "exp/m7-b2.mp3",
+    "dur": 4.37
+   },
+   {
+    "text": "For one breath, let the worry be there, without anyone gripping it.",
+    "hold": 7,
+    "kind": "say",
+    "audio": "exp/m7-b3.mp3",
+    "dur": 4.56
+   },
+   {
+    "text": "When there is no 'I', there is freedom. Lightly. No grabbing, and no pushing away.",
+    "hold": 3,
+    "kind": "say",
+    "audio": "exp/m7-b4.mp3",
+    "dur": 5.63
+   }
+  ],
+  "verse": {
+   "ref": "8.4",
+   "dev": "यदा नाहं तदा मोक्षो यदाहं बन्धनं तदा।<br>मत्वेति हेलया किञ्चिन्मा गृहाण विमुञ्च मा॥",
+   "iast": "yadā nāhaṃ tadā mokṣo yadāhaṃ bandhanaṃ tadā | matveti helayā kiñcin mā gṛhāṇa vimuñca mā ||",
+   "en": "When there is no 'I', there is freedom. When there is 'I', there is bondage. Knowing this, lightly, grab nothing and push nothing away.",
+   "intro": "The sage said:",
+   "audio": "exp/m7-v.mp3",
+   "dur": 8.74
+  }
+ },
+ {
+  "name": "The ocean",
+  "beats": [
+   {
+    "text": "Thoughts, feelings, sounds and worries keep arriving. Let them. They are waves.",
+    "hold": 2,
+    "kind": "say",
+    "audio": "exp/m8-b1.mp3",
+    "dur": 5.52
+   },
+   {
+    "text": "The ocean never fights its waves. It doesn't need them to stop.",
+    "hold": 2,
+    "kind": "say",
+    "audio": "exp/m8-b2.mp3",
+    "dur": 4.75
+   },
+   {
+    "text": "Let everything rise and fall, on its own, in you.",
+    "hold": 12,
+    "kind": "say",
+    "audio": "exp/m8-b3.mp3",
+    "dur": 4.05
+   }
+  ],
+  "verse": {
+   "ref": "7.1",
+   "dev": "मय्यनन्तमहाम्भोधौ विश्वपोत इतस्ततः।<br>भ्रमति स्वान्तवातेन न ममास्त्यसहिष्णुता॥",
+   "iast": "mayy ananta-mahāmbhodhau viśva-pota itas tataḥ | bhramati svānta-vātena na mamāsty asahiṣṇutā ||",
+   "en": "In me, the endless ocean, the ship of the world drifts this way and that on its own winds. I am not troubled.",
+   "intro": "The king said:",
+   "audio": "exp/m8-v.mp3",
+   "dur": 7.85
+  }
+ },
+ {
+  "name": "Silence",
+  "beats": [
+   {
+    "text": "At the very end of the book, Janaka asks a string of questions. Where is bondage? Where is freedom? Where is the teacher? Where is the student?",
+    "hold": 2,
+    "kind": "say",
+    "audio": "exp/m9-b1.mp3",
+    "dur": 8.38
+   },
+   {
+    "text": "And then, he says nothing at all.",
+    "hold": 2.5,
+    "kind": "say",
+    "audio": "exp/m9-b2.mp3",
+    "dur": 3.07
+   },
+   {
+    "text": "Let's end the same way. Thirty seconds, with nothing to do.",
+    "hold": 30,
+    "kind": "quiet",
+    "audio": "exp/m9-b3.mp3",
+    "dur": 4.33
+   },
+   {
+    "text": "Whatever was aware during that silence is here now. It is what you are. It doesn't need this page, or any book. Go gently.",
+    "hold": 4,
+    "kind": "say",
+    "audio": "exp/m9-b4.mp3",
+    "dur": 7.93
+   }
+  ],
+  "verse": {
+   "ref": "18.1",
+   "dev": "यस्य बोधोदये तावत्स्वप्नवद्भवति भ्रमः।<br>तस्मै सुखैकरूपाय नमः शान्ताय तेजसे॥",
+   "iast": "yasya bodhodaye tāvat svapnavad bhavati bhramaḥ | tasmai sukhaikarūpāya namaḥ śāntāya tejase ||",
+   "en": "Bow to That which is happiness itself, peace and light. When it is known, all confusion becomes like a dream.",
+   "intro": "And the book bows:",
+   "audio": "exp/m9-v.mp3",
+   "dur": 7.97
+  }
+ }
+]
