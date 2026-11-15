@@ -1,0 +1,1196 @@
+<title>Ashtavakra Gita</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&family=Nunito:wght@500;700;800&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap">
+<style>
+/* Layout: one long scroll like an unrolled palm-leaf manuscript; sticky bar holds the
+   Grown-up / Age-5 switch, which rewrites every section. Cool dawn paper, ink indigo, turmeric gold, sea teal. */
+:root{
+  --bg:#EDF0F5; --surface:#F8F9FC; --surface-2:#E2E7F0; --ink:#18203A; --muted:#556080; --line:#CDD3E0;
+  --accent:#9A600A; --gold:#B8770F; --indigo:#3D4FA8; --water:#2A6F8F; --water-2:#7FB3CB; --foam:#FFFFFF;
+  --sky-1:#BFD8EC; --sky-2:#E8F1F8; --cloud:#FFFFFF; --cloud-ink:#2B3350; --night:#0A0E1C;
+  --rope:#B48A55; --rope-2:#E8CFA4; --pot:#A8603E; --star:#7C86A8;
+  --series-a:#3D4FA8; --series-j:#B8770F; --kid-tint:#FFF3DA;
+  --f-display:"Marcellus","Cormorant Garamond",Georgia,serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-kid:"Nunito","Figtree",system-ui,sans-serif;
+  --f-skt:"Tiro Devanagari Sanskrit","Noto Serif Devanagari","Nirmala UI",serif;
+  --step--1:.84rem; --step-0:1rem; --step-1:1.2rem; --step-2:1.55rem; --step-3:2.1rem; --step-4:clamp(2.6rem,7vw,4.6rem);
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1122; --surface:#151B33; --surface-2:#1C2442; --ink:#E7E9F3; --muted:#9AA2BF; --line:#2A3352;
+  --accent:#E3A642; --gold:#C2861E; --indigo:#8C9CF0; --water:#2F7FA3; --water-2:#1C4F6C; --foam:#CFE6F2;
+  --sky-1:#1A2850; --sky-2:#2B3F72; --cloud:#3C4C7C; --cloud-ink:#EEF0F8; --night:#000000;
+  --rope:#A07A48; --rope-2:#D8B886; --pot:#C0714E; --star:#AEB7DA;
+  --series-a:#6F82E0; --series-j:#C2861E; --kid-tint:#2A2516; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0D1122; --surface:#151B33; --surface-2:#1C2442; --ink:#E7E9F3; --muted:#9AA2BF; --line:#2A3352;
+  --accent:#E3A642; --gold:#C2861E; --indigo:#8C9CF0; --water:#2F7FA3; --water-2:#1C4F6C; --foam:#CFE6F2;
+  --sky-1:#1A2850; --sky-2:#2B3F72; --cloud:#3C4C7C; --cloud-ink:#EEF0F8; --night:#000000;
+  --rope:#A07A48; --rope-2:#D8B886; --pot:#C0714E; --star:#AEB7DA;
+  --series-a:#6F82E0; --series-j:#C2861E; --kid-tint:#2A2516; color-scheme:dark;}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased}
+html.kid body{font-family:var(--f-kid);font-size:1.06rem}
+html.kid .a{display:none!important}
+html:not(.kid) .k{display:none!important}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--indigo)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;line-height:1.15;margin:0}
+h2{font-size:var(--step-3)}
+h3{font-size:var(--step-1)}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.prose{max-width:66ch}
+.eyebrow{font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;font-family:var(--f-body)}
+.muted{color:var(--muted)}
+.skt{font-family:var(--f-skt)}
+.iast{font-family:var(--f-skt);font-style:italic;color:var(--muted)}
+
+/* Top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:12px;padding-block:8px}
+.brand{font-family:var(--f-display);font-size:1.1rem;white-space:nowrap;text-decoration:none;color:var(--ink)}
+.nav{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:.86rem;text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.mode{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg);flex:none}
+.mode button{border:0;background:none;padding:6px 12px;border-radius:999px;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (max-width:640px){.nav{display:none}.bar .wrap{justify-content:space-between}}
+
+/* Hero */
+.hero{padding-block:56px 40px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:var(--step-4);letter-spacing:.01em}
+.hero .dev{font-family:var(--f-skt);font-size:var(--step-2);color:var(--accent);margin-top:6px}
+.hero .thesis{font-size:var(--step-1);margin-top:18px;max-width:40ch}
+html.kid .hero .thesis{font-size:1.3rem}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.92rem;color:var(--muted)}
+.facts b{font-family:var(--f-display);font-size:1.5rem;color:var(--ink);font-weight:400;margin-right:4px;font-variant-numeric:tabular-nums}
+.hero-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);padding:10px 16px;border-radius:999px;cursor:pointer;font-weight:600;text-decoration:none;color:var(--ink)}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bend-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.bend-card svg{width:100%;height:auto;display:block;cursor:pointer}
+.bend-card figcaption{font-size:.9rem;color:var(--muted);margin-top:10px}
+#bendLine{transition:d 1.6s cubic-bezier(.6,.1,.2,1)}
+
+/* Sections */
+section.s{padding-block:64px;border-top:1px solid var(--line)}
+.s-head{display:grid;gap:10px;margin-bottom:28px}
+.s-head p{max-width:66ch;color:var(--muted);font-size:1.05rem}
+
+/* One breath */
+.breath{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0;margin:0}
+@media (max-width:900px){.breath{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.breath{grid-template-columns:1fr}}
+.breath li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:8px;align-content:start}
+.breath ol{padding:0;margin:0}
+.breath .n{font-family:var(--f-display);font-size:1.8rem;color:var(--gold);line-height:1}
+.breath h3{font-size:1.15rem}
+
+/* Story */
+.story{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.scene{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:10px;align-content:start}
+.scene .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.scene .num{font-family:var(--f-display);font-size:1.6rem;color:var(--gold);line-height:1}
+.tag{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.mb{border-color:var(--indigo);color:var(--indigo)}
+.tag.pop{border-style:dashed}
+.scene h3{font-size:1.15rem}
+.scene svg{width:56px;height:56px}
+.note{background:var(--surface-2);border-radius:var(--r);padding:14px 16px;font-size:.95rem;margin-top:16px;max-width:80ch}
+
+/* Speakers + chart */
+.speakers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:26px}
+@media (max-width:640px){.speakers{grid-template-columns:1fr}}
+.sp{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.sp .dot{width:14px;height:14px;border-radius:4px;margin-top:6px}
+.chart-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.chart-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:8px}
+.legend{display:flex;gap:16px;font-size:.88rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.chart-scroll{overflow-x:auto}
+#chart{display:block;width:100%;min-width:560px;height:auto}
+#chart text{fill:var(--muted);font-family:var(--f-body);font-size:12px}
+#chart .grid{stroke:var(--line);stroke-width:1}
+#chart .hit{fill:transparent;cursor:pointer}
+#chart .barg.sel path{stroke:var(--ink);stroke-width:2}
+#chart .barg:hover path{opacity:.85}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:.82rem;padding:6px 10px;border-radius:8px;z-index:40;max-width:240px;line-height:1.35}
+.chap{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--surface-2);border-radius:var(--r);padding:18px}
+.chap .big{font-family:var(--f-display);font-size:3rem;line-height:1;color:var(--gold);grid-row:span 3;font-variant-numeric:tabular-nums}
+.chap h3{font-size:1.35rem}
+.chap .meta{font-size:.88rem;color:var(--muted)}
+.chap-nav{display:flex;gap:8px;margin-top:10px}
+details.tbl{margin-top:14px;font-size:.9rem}
+details.tbl summary{cursor:pointer;color:var(--muted)}
+details.tbl table{border-collapse:collapse;width:100%;margin-top:8px}
+details.tbl td,details.tbl th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;font-variant-numeric:tabular-nums}
+.tbl-wrap{overflow-x:auto}
+
+/* Labs */
+.labs{display:grid;gap:22px}
+.lab{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr}
+@media (max-width:860px){.lab{grid-template-columns:1fr}}
+.lab .stage{position:relative;background:var(--surface-2);min-height:260px;display:flex;align-items:center;justify-content:center}
+.lab .stage svg,.lab .stage canvas{display:block;width:100%;height:auto}
+.lab .text{padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.lab .text h3{font-size:1.5rem}
+.verse-ref{font-size:.85rem;color:var(--muted);border-left:3px solid var(--gold);padding-left:10px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+.seg button{border:0;background:none;padding:7px 14px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--water);color:#fff}
+.status{font-weight:600;min-height:3.2em}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.sky{position:relative;width:100%;height:280px;background:linear-gradient(180deg,var(--sky-1),var(--sky-2));overflow:hidden}
+.sky .label{position:absolute;left:14px;bottom:12px;font-size:.85rem;color:var(--cloud-ink);background:color-mix(in oklab,var(--cloud) 70%,transparent);padding:4px 10px;border-radius:999px}
+.cloud{position:absolute;left:-30%;background:var(--cloud);color:var(--cloud-ink);padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;border:0;box-shadow:18px -10px 0 -4px var(--cloud),-16px -6px 0 -6px var(--cloud);animation:drift linear infinite;transition:opacity .6s,transform .6s;white-space:nowrap}
+.cloud.gone{opacity:0;pointer-events:none}
+@keyframes drift{from{left:-30%}to{left:105%}}
+#pot .half{transition:transform 1.1s cubic-bezier(.3,.7,.3,1),opacity 1.1s;transform-box:fill-box;transform-origin:center}
+.broken #potL{transform:translate(-70px,40px) rotate(-24deg);opacity:.55}
+.broken #potR{transform:translate(70px,40px) rotate(22deg);opacity:.55}
+#pot .lbl{transition:opacity .6s}
+#rings circle.ring{transition:opacity .7s,transform .7s;transform-box:fill-box;transform-origin:center}
+#rings .off{opacity:0;transform:scale(1.25)}
+#rings text{font-family:var(--f-body);font-size:12px;fill:var(--ink);font-weight:600;transition:opacity .5s}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 13px;cursor:pointer;font-weight:600;font-size:.9rem}
+.chip[aria-pressed="true"]{text-decoration:line-through;color:var(--muted);background:var(--surface-2)}
+
+/* Freedom */
+.free-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.free-grid{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.moves{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media (max-width:420px){.moves{grid-template-columns:repeat(2,1fr)}}
+.move{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.88rem;display:grid;gap:2px;transition:background .3s,border-color .3s}
+.move b{font-size:.95rem}
+.move .iast{font-size:.82rem}
+.move.on{background:var(--kid-tint);border-color:var(--gold)}
+.situ{display:flex;flex-wrap:wrap;gap:8px}
+.situ button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.9rem}
+.situ button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.resp{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.resp{grid-template-columns:1fr}}
+.resp div{border-radius:10px;padding:12px;font-size:.95rem}
+.resp .bound{background:var(--surface-2)}
+.resp .freed{background:var(--kid-tint)}
+.resp b{display:block;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.knot{display:flex;align-items:center;gap:14px}
+.knot svg{width:110px;flex:none}
+
+/* Verses */
+.v-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.verses{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.verse{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:10px;align-content:start}
+.verse .ref{display:flex;justify-content:space-between;gap:8px;font-size:.82rem;color:var(--muted)}
+.verse .ref b{color:var(--accent);font-weight:700}
+.verse .dev{font-family:var(--f-skt);font-size:1.12rem;line-height:1.7}
+.verse .iast{font-size:.92rem;line-height:1.55}
+.verse .tr{font-size:1.02rem}
+.verse .kidline{font-family:var(--f-kid);background:var(--kid-tint);border-radius:8px;padding:8px 12px;font-size:.95rem}
+.hide-skt .verse .dev,.hide-skt .verse .iast{display:none}
+
+/* Compare */
+.cmp-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+table.cmp{border-collapse:collapse;width:100%;min-width:620px}
+.cmp th,.cmp td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp thead th{font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.cmp tbody th{font-weight:600;color:var(--muted);font-size:.9rem;width:20%}
+.cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:640px){.paths{grid-template-columns:1fr}}
+.paths figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.paths svg{width:100%;height:auto;display:block}
+.paths figcaption{font-size:.92rem;color:var(--muted);margin-top:8px}
+
+/* Osho comparison */
+.verdict{background:var(--ink);color:var(--bg);border-radius:18px;padding:26px;display:grid;gap:12px}
+.verdict .eyebrow{color:var(--accent)}
+.verdict h3{font-size:var(--step-3);max-width:24ch}
+.verdict p{max-width:68ch;opacity:.92}
+.verdict .row{display:flex;flex-wrap:wrap;gap:8px}
+.verdict .pill{border:1px solid color-mix(in oklab,var(--bg) 40%,transparent);border-radius:999px;padding:6px 12px;font-size:.88rem}
+.o-block{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.o-block>h3{font-size:var(--step-2)}
+.o-block>p{max-width:68ch;color:var(--muted)}
+.dotrow{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+@media (max-width:600px){.dotrow{grid-template-columns:1fr}}
+.dotrow b{display:block}
+.dotrow span.muted{font-size:.85rem}
+.dots{display:flex;flex-wrap:wrap;gap:4px}
+.dots i{width:12px;height:12px;border-radius:3px;display:block}
+.dots.t i{background:var(--series-a)}
+.dots.o i{background:var(--series-j)}
+.dots i.half{width:6px}
+.talks{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+@media (max-width:760px){.talks{grid-template-columns:repeat(5,minmax(0,1fr))}}@media (max-width:480px){.talks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.talk{overflow-wrap:anywhere;min-width:0;border-radius:10px;padding:10px 8px;display:grid;gap:4px;font-size:.78rem;min-height:110px;align-content:start;border:1px solid var(--line)}
+.talk.s{background:color-mix(in oklab,var(--series-j) 20%,var(--surface))}
+.talk.q{background:var(--surface)}
+.talk .tn{font-family:var(--f-display);font-size:1.3rem;line-height:1}
+.talk .tt{font-weight:600;line-height:1.3}
+.talk .td{color:var(--muted)}
+.tkey{display:flex;gap:16px;font-size:.85rem;color:var(--muted)}
+.tkey i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid var(--line)}
+.pairs{display:grid;gap:14px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+@media (max-width:700px){.pair{grid-template-columns:minmax(0,1fr)}}
+.pair>div{padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.pair .ov{background:color-mix(in oklab,var(--series-j) 9%,var(--surface))}
+.pair .take{grid-column:1/-1;border-top:1px solid var(--line);font-size:.95rem}
+.pair blockquote{margin:0;font-size:1.02rem}
+.who{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
+.who.t{color:var(--series-a)}
+.who.o{color:var(--accent)}
+.score-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.score-scroll{overflow-x:auto}
+#score{display:block;width:100%;min-width:560px;height:auto}
+#score text{font-family:var(--f-body);font-size:13px;fill:var(--ink)}
+#score .tick{fill:var(--muted);font-size:12px}
+#score .gl{stroke:var(--line)}
+.chooser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px}
+@media (max-width:760px){.chooser{grid-template-columns:1fr}}
+.goals{display:grid;gap:8px;align-content:start}
+.goals button{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:600}
+.goals button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.pickcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start}
+.pickcard .win{font-family:var(--f-display);font-size:var(--step-2)}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){.plan{grid-template-columns:1fr}}
+.plan div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:6px;align-content:start}
+.plan b.wk{font-family:var(--f-display);font-weight:400;font-size:1.3rem;color:var(--gold)}
+.src{font-size:.85rem;color:var(--muted);max-width:80ch}
+
+.chchips{display:flex;flex-wrap:wrap;gap:6px}
+.chchips button{min-width:40px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 10px;cursor:pointer;font-weight:700;font-variant-numeric:tabular-nums}
+.chchips button[aria-pressed="true"]{background:var(--series-j);border-color:var(--series-j);color:#fff}
+.tmap{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:4px}
+@media (max-width:760px){.tmap{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.tcell{display:grid;gap:1px;padding:6px 4px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:.68rem;line-height:1.2;min-width:0;overflow:hidden;text-align:center}
+.tcell b{font-family:var(--f-display);font-weight:400;font-size:1rem;font-variant-numeric:tabular-nums}
+.tcell span{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcell.v{background:color-mix(in oklab,var(--series-j) 22%,var(--surface))}
+.tcell.q{background:var(--surface)}
+.tcell.on{background:var(--series-j);border-color:var(--series-j);color:#fff}
+.tcell.on span{color:#fff}
+.tcell:hover{border-color:var(--ink)}
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:8px}
+.guide ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.pair blockquote.hi{font-family:var(--f-skt);color:var(--muted);font-size:.98rem;line-height:1.7}
+/* Myths */
+.myths{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (max-width:700px){.myths{grid-template-columns:1fr}}
+.myth{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:8px}
+.myth .q{font-family:var(--f-display);font-size:1.2rem}
+.myth .q::before{content:"Misreading";display:block;font-family:var(--f-body);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+
+/* Try */
+.try{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+@media (max-width:640px){.try{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.try svg{width:170px;height:170px}
+#prompt{font-family:var(--f-display);font-size:var(--step-2);min-height:3.4em;max-width:30ch}
+
+/* Bedtime */
+.bed{background:var(--kid-tint);border-radius:18px;padding:26px;font-family:var(--f-kid)}
+.bed h2,.bed h3{font-family:var(--f-kid);font-weight:800}
+.props{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+.props span{background:var(--surface);border-radius:999px;padding:6px 12px;font-weight:700;font-size:.9rem}
+.steps{display:grid;gap:12px;padding:0;margin:0;counter-reset:st}
+.steps li{list-style:none;background:var(--surface);border-radius:14px;padding:16px 18px 16px 62px;position:relative;display:grid;gap:6px}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:16px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--gold);color:#fff;font-weight:800;display:grid;place-items:center}
+.steps .say{font-size:1.05rem}
+.steps .do,.steps .ask{font-size:.93rem}
+.steps .do b,.steps .ask b{color:var(--accent)}
+.player{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;background:var(--surface);border-radius:16px;padding:14px 18px;margin-bottom:18px}
+.pbtn{width:54px;height:54px;flex:none;border-radius:50%;border:0;background:var(--gold);color:#fff;cursor:pointer;display:grid;place-items:center}
+.pbtn svg{width:22px;height:22px;fill:currentColor}
+.ptrack{flex:1;min-width:180px;display:grid;gap:6px}
+.ptrack .now{font-weight:800}
+.ptrack .sub{font-size:.85rem;color:var(--muted)}
+.pbar{height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--gold);transition:width .25s linear}
+.popt{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700;cursor:pointer}
+.popt input{width:18px;height:18px;accent-color:var(--gold)}
+.steps li{padding-right:60px}
+.steps li.playing{outline:3px solid var(--gold);outline-offset:-3px}
+.sbtn{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--bg);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.sbtn svg{width:14px;height:14px;fill:currentColor}
+.steps li.playing .sbtn{background:var(--gold);color:#fff;border-color:var(--gold)}
+
+/* Glossary + history */
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.term .w{font-family:var(--f-skt);font-size:1.2rem}
+.term .say{font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+.hist{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+@media (max-width:800px){.hist{grid-template-columns:1fr}}
+.hist ul{margin:0;padding-left:1.1em;display:grid;gap:8px}
+.route{display:grid;gap:8px;counter-reset:r;padding:0;margin:0}
+.route li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:flex;gap:12px;align-items:baseline}
+.route li b{font-family:var(--f-display);font-weight:400;font-size:1.3rem;color:var(--gold);min-width:2.2ch;font-variant-numeric:tabular-nums}
+footer{padding-block:40px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Ashtavakra Gita</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#breath">In one breath</a><a href="#story">The story</a><a href="#map">20 chapters</a><a href="#ideas">Five pictures</a><a href="#freedom">Stuck vs free</a><a href="#verses">Key verses</a><a href="#compare">vs Bhagavad Gita</a><a href="#osho">vs Osho</a><a href="#myths">Misreadings</a><a href="#try">Try it</a><a href="#bedtime">Bedtime story</a><a href="#words">Words</a><a href="#history">History</a>
+    </nav>
+    <div class="mode" role="group" aria-label="Explain level">
+      <button type="button" data-mode="adult" aria-pressed="true">Grown-up</button>
+      <button type="button" data-mode="kid" aria-pressed="false">Age 5</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">A Sanskrit dialogue · Advaita Vedanta</div>
+      <h1>Ashtavakra Gita</h1>
+      <div class="dev">अष्टावक्र गीता · <span class="iast" style="color:inherit">Aṣṭāvakra Gītā</span></div>
+      <p class="thesis a">A short, fearless conversation between a young sage and a king. Its one claim: you are already free. You only believe you are bound.</p>
+      <p class="thesis k">A very old story. A wise boy with a bendy body tells a king a big secret: deep inside, you are like the sky, and nothing can ever hurt the sky.</p>
+      <div class="facts">
+        <span><b>20</b>chapters</span><span><b>298</b>verses</span><span><b>2</b>speakers</span><span><b>1</b>idea</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn primary" href="#breath"><span class="a">Start with the core idea</span><span class="k">Start the story</span></a>
+        <button class="btn" type="button" id="heroKid"><span class="a">Explain it to a 5-year-old</span><span class="k">Switch back to grown-up</span></button>
+      </div>
+    </div>
+    <figure class="bend-card" style="margin:0">
+      <svg viewBox="0 0 400 170" role="img" aria-label="A line bent in eight places that straightens when tapped" id="bendSvg">
+        <path id="bendLine" d="M20,85 L60,40 L100,120 L140,45 L180,125 L220,40 L260,128 L300,48 L340,118 L380,85" fill="none" stroke="var(--gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="bendDots" fill="var(--ink)"></g>
+      </svg>
+      <figcaption><span class="a"><b>aṣṭa</b> = eight, <b>vakra</b> = bent. The sage was born bent in eight places. Tap the line to see what happened to him at the end of his story.</span><span class="k">His name means "bent in eight places". Tap the wiggly line!</span></figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- ONE BREATH -->
+<section class="s" id="breath"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">The whole teaching</div>
+    <h2 class="a">In one breath</h2><h2 class="k">The secret, in 4 little steps</h2>
+    <p class="a">Most spiritual books give you a ladder. This one says there is no ladder, because you are already where the ladder leads. Everything else in the text unpacks these four points.</p>
+    <p class="k">The wise boy told the king four simple things. You can learn them too.</p>
+  </div>
+  <ol class="breath">
+    <li><span class="n">1</span><h3 class="a">You are the awareness</h3><h3 class="k">There's a watcher inside you</h3>
+      <p class="a">You are not the body, the thoughts, or your roles. You are the knowing in which all of them show up. The text calls it <i>sākṣī</i>, the witness.</p>
+      <p class="k">Inside you is a quiet "watcher". It sees everything you see, hears everything you hear, and feels everything you feel.</p></li>
+    <li><span class="n">2</span><h3 class="a">It is already free</h3><h3 class="k">Nothing can hurt the watcher</h3>
+      <p class="a">Awareness is never stained by what passes through it. A movie of a fire never burns the screen.</p>
+      <p class="k">Clouds float in the sky, but the sky never gets wet or dirty. You are like the sky.</p></li>
+    <li><span class="n">3</span><h3 class="a">Bondage is a belief</h3><h3 class="k">We feel stuck when we grab</h3>
+      <p class="a">You feel bound when the mind grabs, pushes away, and keeps saying "I, me, mine". The chains are made of thinking (1.11, 8.1–8.4).</p>
+      <p class="k">When we hold things too tight ("Mine! I want it! Go away!"), we feel stuck and sad.</p></li>
+    <li><span class="n">4</span><h3 class="a">So rest, and live</h3><h3 class="k">Open your hands</h3>
+      <p class="a">There is nothing to achieve. Recognise what you are, rest in it, and live naturally. King Janaka went on ruling a kingdom.</p>
+      <p class="k">Let go a little and you feel light and happy again, like a balloon. You can still play, help, and have fun.</p></li>
+  </ol>
+</div></section>
+
+<!-- STORY -->
+<section class="s" id="story"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Who was Ashtavakra?</div>
+    <h2 class="a">The boy bent in eight places</h2><h2 class="k">The story of the bendy boy</h2>
+    <p class="a">The Gita itself tells no biography. Its teacher's life story comes from the Mahābhārata (Vana Parva, chapters 132–134), with a few scenes added by popular retellings. Each card says which.</p>
+    <p class="k">Here is his story, in seven little pictures.</p>
+  </div>
+  <div class="story">
+    <article class="scene"><div class="top"><span class="num">1</span><span class="tag mb">Mahābhārata</span></div>
+      <h3 class="a">Corrected from the womb</h3><h3 class="k">The baby who said "Oops!"</h3>
+      <p class="a">Sage Kahoḍa recites the Vedas near his pregnant wife Sujātā. The unborn child, already learned, points out his father's mistakes. Stung, Kahoḍa curses him to be born bent in eight places.</p>
+      <p class="k">Before he was born, a baby heard his daddy reading and said, "Daddy, you got it wrong!" Daddy got grumpy, and the baby was born with a body bent in eight places.</p></article>
+    <article class="scene"><div class="top"><span class="num">2</span><span class="tag mb">Mahābhārata</span></div>
+      <h3 class="a">The father lost in debate</h3><h3 class="k">Daddy loses a contest</h3>
+      <p class="a">Kahoḍa goes to King Janaka's court to win wealth in a debate. He loses to the court scholar Vandin (Bandī), and the loser's penalty is to be drowned.</p>
+      <p class="k">His daddy went to a big clever-question contest at the king's palace. He lost and was taken away under the water.</p></article>
+    <article class="scene"><div class="top"><span class="num">3</span><span class="tag mb">Mahābhārata</span></div>
+      <h3 class="a">Twelve years old at the gate</h3><h3 class="k">"No kids allowed!"</h3>
+      <p class="a">Raised by his grandfather Uddālaka beside his uncle Śvetaketu, Ashtavakra learns the truth at twelve and walks to Janaka's court. The gatekeeper refuses a child. His reply: a person is elder by knowledge, not by grey hair.</p>
+      <p class="k">At 12 he walked to the palace. The guard said, "No kids allowed!" He said, "Being wise makes you grown-up, not being tall."</p></article>
+    <article class="scene"><div class="top"><span class="num">4</span><span class="tag pop">Popular retelling</span></div>
+      <h3 class="a">The court laughs</h3><h3 class="k">Everyone laughs. He laughs louder.</h3>
+      <p class="a">Scholars laugh at his twisted body. He laughs back: he came looking for wise men and found leather-dealers, people who judge only by skin. Janaka bows to him. Osho tells this version in his very first talk on the text.</p>
+      <p class="k">Everyone laughed at his bendy body. He laughed back: "You only look at the outside!" The king felt ashamed and said sorry.</p></article>
+    <article class="scene"><div class="top"><span class="num">5</span><span class="tag mb">Mahābhārata</span></div>
+      <h3 class="a">The riddle duel</h3><h3 class="k">He wins!</h3>
+      <p class="a">He and Vandin trade verses counting up from one to thirteen. At thirteen Vandin falters and Ashtavakra completes the verse. Vandin reveals he is a son of Varuṇa, lord of waters; the drowned scholars were sent to his father's ritual. Kahoḍa returns.</p>
+      <p class="k">He won the clever-question contest, and his daddy came back up from the water, safe and sound.</p></article>
+    <article class="scene"><div class="top"><span class="num">6</span><span class="tag mb">Mahābhārata</span></div>
+      <h3 class="a">Straightened in the river</h3><h3 class="k">A splash in a magic river</h3>
+      <p class="a">His father asks him to bathe in the Samaṅgā river. He comes out with straight limbs. (This is the moment the line at the top of the page shows.)</p>
+      <p class="k">Daddy said sorry and asked him to splash in a special river. When he came out, his body was straight!</p></article>
+    <article class="scene"><div class="top"><span class="num">7</span><span class="tag">Traditional frame</span></div>
+      <h3 class="a">The king becomes the student</h3><h3 class="k">The king becomes the student</h3>
+      <p class="a">Janaka, a king already famous for wisdom, asks the young sage how to be truly free. The Ashtavakra Gita is that conversation.</p>
+      <p class="k">The king asked the boy, "How can I be truly happy and free?" Their talk became this book.</p></article>
+  </div>
+  <div class="note">
+    <p class="a"><b>Two folk legends often told with it.</b> <i>The dream:</i> Janaka dreams he is a starving beggar, wakes as a king, and asks, "Which is real, this or that?" Ashtavakra answers, "Neither. You, who saw both, are real." <i>The stirrup:</i> Janaka asks to be taught in the time it takes to put one foot in a horse's stirrup. These are later stories, not part of the text, but they capture its spirit: freedom is a recognition, and recognition takes no time.</p>
+    <p class="k"><b>A bonus story!</b> The king dreamed he was a hungry beggar. When he woke up, he asked, "Am I a king or a beggar?" The boy said, "Neither! You are the one who watched both."</p>
+  </div>
+</div></section>
+
+<!-- MAP -->
+<section class="s" id="map"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Map of the book</div>
+    <h2 class="a">Twenty chapters, two voices</h2><h2 class="k">Who talks, and how much?</h2>
+    <p class="a">The teacher speaks, then the king reports what has happened to him, then the teacher tests or deepens it. Bar height is the number of verses. Chapter 18 alone holds a third of the book. Tap any bar.</p>
+    <p class="k">The boy talks, then the king talks, back and forth. Tall bars are long chapters. Tap one!</p>
+  </div>
+  <div class="speakers">
+    <div class="sp"><i class="dot" style="background:var(--series-a)"></i><div><h3>Ashtavakra · the teacher</h3><p class="muted a">The sage, perhaps twelve in the story. He speaks 12 chapters, 221 verses. Direct, sometimes provocative, never gradual.</p><p class="muted k">The wise boy. He does most of the talking.</p></div></div>
+    <div class="sp"><i class="dot" style="background:var(--series-j)"></i><div><h3>Janaka · the student</h3><p class="muted a">King of Videha, an exemplary ruler, also known from the Upaniṣads. He speaks 8 chapters, 77 verses, mostly exclaiming what he now sees.</p><p class="muted k">The king. He listens, then shouts "Wow!" about what he understands.</p></div></div>
+  </div>
+  <div class="chart-box">
+    <div class="chart-top">
+      <div><b>Verses per chapter</b> <span class="muted">· 298 total</span></div>
+      <div class="legend"><span><i style="background:var(--series-a)"></i>Ashtavakra</span><span><i style="background:var(--series-j)"></i>Janaka</span></div>
+    </div>
+    <div class="chart-scroll"><svg id="chart" viewBox="0 0 720 300" role="img" aria-label="Bar chart of verses per chapter, coloured by speaker"></svg></div>
+    <div class="chap" id="chap" aria-live="polite"></div>
+    <div class="chap-nav"><button class="btn" type="button" id="prevCh">Previous chapter</button><button class="btn" type="button" id="nextCh">Next chapter</button></div>
+    <details class="tbl"><summary>Show all chapters as a table</summary><div class="tbl-wrap"><table id="chTable"><thead><tr><th>Ch.</th><th>Title</th><th>Speaker</th><th>Verses</th></tr></thead><tbody></tbody></table></div></details>
+  </div>
+  <p class="muted" style="font-size:.85rem;margin-top:10px">Chapter titles and counts follow the commonly used edition (as in the John Richards and Nityaswarupananda translations). Some manuscripts number a few verses differently.</p>
+</div></section>
+
+<!-- IDEAS / LABS -->
+<section class="s" id="ideas"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">See it, play with it</div>
+    <h2 class="a">Five pictures the text uses</h2><h2 class="k">Five games that show the secret</h2>
+    <p class="a">The Ashtavakra Gita argues almost entirely through images: ocean and wave, rope and snake, space and pot. Each lab below is built from a specific verse. Play with it, then read the verse.</p>
+    <p class="k">Each picture below is a little game. Tap the buttons and see what happens.</p>
+  </div>
+  <div class="labs">
+
+    <!-- 1 ocean -->
+    <article class="lab">
+      <div class="stage"><canvas id="ocean" width="800" height="400" aria-label="Animated ocean with waves" role="img"></canvas></div>
+      <div class="text">
+        <div class="eyebrow">Picture 1</div>
+        <h3>The ocean and the waves</h3>
+        <div class="controls"><div class="seg" role="group" aria-label="Viewpoint"><button type="button" data-ocean="wave" aria-pressed="true">See as a wave</button><button type="button" data-ocean="sea" aria-pressed="false">See as the ocean</button></div></div>
+        <p class="status" id="oceanStatus"></p>
+        <p class="a">Each wave feels separate, with its own shape, size and lifespan. Seen as water, nothing is separate and nothing is born or dies. The text says the world rises from the Self the way waves rise from water, and is never other than it. A wave does not need to become water. It only needs to notice.</p>
+        <p class="k">Every wave thinks, "I'm me, and you're you." But they're all made of the same water! When a wave goes down, it doesn't disappear. It just becomes the ocean again.</p>
+        <p class="verse-ref">2.4 · Waves, foam and bubbles are not different from water. So this world, flowing out of the Self, is not different from the Self.<br>7.1 · In me, the endless ocean, the ship of the world drifts this way and that on its own winds. I am not troubled.</p>
+      </div>
+    </article>
+
+    <!-- 2 rope -->
+    <article class="lab">
+      <div class="stage"><svg id="rope" viewBox="0 0 400 220" role="img" aria-label="A coiled rope in the dark that can look like a snake">
+        <defs><radialGradient id="lamp" cx="0.15" cy="0.15" r="0.9"><stop offset="0" stop-color="var(--gold)" stop-opacity=".55"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></radialGradient></defs>
+        <rect width="400" height="220" fill="var(--surface-2)"/>
+        <rect id="lampGlow" width="400" height="220" fill="url(#lamp)"/>
+        <path d="M30,150 C90,60 140,200 200,140 S300,70 352,132" fill="none" stroke="var(--rope)" stroke-width="16" stroke-linecap="round"/>
+        <path id="ropeTwist" d="M30,150 C90,60 140,200 200,140 S300,70 352,132" fill="none" stroke="var(--rope-2)" stroke-width="16" stroke-dasharray="3 7" stroke-linecap="butt"/>
+        <g id="ropeEnd" stroke="var(--rope)" stroke-width="3" stroke-linecap="round"><line x1="352" y1="132" x2="378" y2="122"/><line x1="352" y1="132" x2="380" y2="134"/><line x1="352" y1="132" x2="374" y2="146"/><line x1="352" y1="132" x2="370" y2="112"/></g>
+        <rect id="dark" width="400" height="220" fill="var(--night)"/>
+        <g id="snake">
+          <path d="M30,150 C90,60 140,200 200,140 S300,70 352,132" fill="none" stroke="#3E4A2E" stroke-width="16" stroke-linecap="round" opacity=".9"/>
+          <ellipse cx="362" cy="130" rx="22" ry="14" fill="#3E4A2E"/>
+          <circle cx="368" cy="124" r="3.4" fill="#E9C13B"/><circle cx="368" cy="136" r="3.4" fill="#E9C13B"/>
+          <path d="M384,130 L396,130 M396,130 L402,124 M396,130 L402,136" stroke="#D2473B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg></div>
+      <div class="text">
+        <div class="eyebrow">Picture 2</div>
+        <h3>The rope and the snake</h3>
+        <label for="light" class="muted" style="font-size:.9rem"><span class="a">Light of understanding</span><span class="k">Turn on the light</span></label>
+        <input type="range" id="light" min="0" max="100" value="12">
+        <p class="status" id="ropeStatus"></p>
+        <p class="a">In dim light a rope looks like a snake, and the fear is completely real. When the lamp comes on, nobody kills the snake. It simply was never there. Ashtavakra uses this to describe how the world looks when you misread who you are: separate, threatening, something to fight. Knowledge removes a misreading. It does not add anything.</p>
+        <p class="k">In the dark, a rope can look like a scary snake! Turn on the light and... it's just a rope. You didn't have to fight anything. Lots of fears are like that.</p>
+        <p class="verse-ref">2.7 · Not knowing the Self, the world appears; knowing the Self, it no longer appears as separate. Not knowing the rope, a snake appears; knowing it, the snake is gone.</p>
+      </div>
+    </article>
+
+    <!-- 3 pot -->
+    <article class="lab">
+      <div class="stage"><svg id="pot" viewBox="0 0 400 260" role="img" aria-label="A clay pot holding space, which can be broken">
+        <defs>
+          <clipPath id="clipL"><rect x="0" y="0" width="200" height="260"/></clipPath>
+          <clipPath id="clipR"><rect x="200" y="0" width="200" height="260"/></clipPath>
+        </defs>
+        <g id="stars" fill="var(--star)"></g>
+        <g class="half" id="potL" clip-path="url(#clipL)"><path class="potp" d="M160,60 L240,60 L236,78 Q300,104 296,158 Q292,216 200,222 Q108,216 104,158 Q100,104 164,78 Z" fill="none" stroke="var(--pot)" stroke-width="9" stroke-linejoin="round"/></g>
+        <g class="half" id="potR" clip-path="url(#clipR)"><path class="potp" d="M160,60 L240,60 L236,78 Q300,104 296,158 Q292,216 200,222 Q108,216 104,158 Q100,104 164,78 Z" fill="none" stroke="var(--pot)" stroke-width="9" stroke-linejoin="round"/></g>
+        <text class="lbl" id="lblIn" x="200" y="152" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Figtree,system-ui,sans-serif" font-weight="600">pot-space</text>
+        <text class="lbl" id="lblOut" x="60" y="34" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Figtree,system-ui,sans-serif" font-weight="600">sky-space</text>
+        <text class="lbl" id="lblOne" x="200" y="40" text-anchor="middle" font-size="16" fill="var(--ink)" font-family="Figtree,system-ui,sans-serif" font-weight="700" opacity="0">just space, exactly as before</text>
+      </svg></div>
+      <div class="text">
+        <div class="eyebrow">Picture 3</div>
+        <h3>The space inside the pot</h3>
+        <div class="controls"><button class="btn primary" type="button" id="breakPot">Break the pot</button><button class="btn" type="button" id="fixPot">Make a new pot</button></div>
+        <p class="status" id="potStatus"></p>
+        <p class="a">The space inside a pot seems to have a shape and a location. Break the pot and that space is not freed, harmed or moved. It was always the one space. The body and mind are the pot; awareness is the space. That is why the text says there is nothing to give up and nothing to grab.</p>
+        <p class="k">A pot has air inside it. If the pot breaks, where does the air go? Nowhere! It was always part of the big sky. You are like the sky, and your body is like the pot.</p>
+        <p class="verse-ref">6.1 · I am endless like space; the world is like a pot. Knowing this, there is nothing to give up, nothing to grab, nothing to destroy.</p>
+      </div>
+    </article>
+
+    <!-- 4 sky -->
+    <article class="lab">
+      <div class="stage" style="min-height:280px"><div class="sky" id="sky"><span class="label"><span class="a">The sky (awareness): untouched</span><span class="k">The sky (that's you!)</span></span></div></div>
+      <div class="text">
+        <div class="eyebrow">Picture 4</div>
+        <h3>The witness: sky and clouds</h3>
+        <div class="controls"><button class="btn primary" type="button" id="addCloud">Add a feeling</button><span class="muted" style="font-size:.9rem">Tap a cloud to let it go.</span></div>
+        <p class="status" id="skyStatus"></p>
+        <p class="a">Anger, joy, worry and boredom pass through like weather. Something notices all of them and is coloured by none. Ashtavakra's opening teaching points straight at it: you are the one seer of everything, already free. Your only bondage is that you take the seer to be something other than yourself, for example a body or a mood.</p>
+        <p class="k">Feelings are like clouds: an angry cloud, a sad cloud, a happy cloud. They float by. You are the big blue sky. Can a cloud hurt the sky? Never!</p>
+        <p class="verse-ref">1.7 · You are the one seer of all, always free. Your bondage is only this: you see the seer as something else.<br><span class="a">(Ashtavakra himself uses the witness and space images; the clouds are a modern teaching aid for them.)</span></p>
+      </div>
+    </article>
+
+    <!-- 5 rings -->
+    <article class="lab">
+      <div class="stage"><svg id="rings" viewBox="0 0 300 300" role="img" aria-label="Five rings for the five elements around a centre of awareness">
+        <defs><radialGradient id="core"><stop offset="0" stop-color="var(--gold)" stop-opacity="1"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></radialGradient></defs>
+        <circle id="coreGlow" cx="150" cy="150" r="30" fill="url(#core)" style="transition:r 1s"/>
+        <g id="ringG"></g>
+        <text id="coreTxt" x="150" y="155" text-anchor="middle" style="font-size:14px">?</text>
+      </svg></div>
+      <div class="text">
+        <div class="eyebrow">Picture 5</div>
+        <h3>Not this, not this: what is left?</h3>
+        <p class="muted" style="font-size:.92rem"><span class="a">Classical Indian thought builds the body and world from five elements. Remove each one in thought and see what cannot be removed.</span><span class="k">You're made of lots of things. Take them away one by one. What's left?</span></p>
+        <div class="chips" id="elChips"></div>
+        <p class="status" id="ringStatus"></p>
+        <p class="a">This is the first answer Ashtavakra gives Janaka. Whatever you can observe, such as bones, blood, warmth, breath or the space they occupy, you are the observer of it. What is left when every observable thing is set aside is not a blank. It is the knowing itself, <i>cid-rūpa</i>, "whose form is awareness".</p>
+        <p class="k">You can notice your body, your breathing, being warm or cold. So who is doing the noticing? That's the real you, the watcher!</p>
+        <p class="verse-ref">1.3 · You are not earth, water, fire, air or sky. To be free, know yourself as awareness, the witness of all these.</p>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<!-- FREEDOM -->
+<section class="s" id="freedom"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Chapter 8 · the shortest definition in the book</div>
+    <h2 class="a">Stuck vs free: six movements of the mind</h2><h2 class="k">Sticky hands and open hands</h2>
+    <p class="a">Chapter 8 gives a precise checklist. You are bound whenever the mind does any of six things about anything. Freedom is not numbness. Feelings still arise; they just are not clutched. Pick a situation to see which movements fire.</p>
+    <p class="k">There are six ways our mind gets "sticky". Pick something that might happen to you, and see which sticky feelings show up.</p>
+  </div>
+  <div class="free-grid">
+    <div class="panel">
+      <div class="situ" id="situ" role="group" aria-label="Situations"></div>
+      <div class="moves" id="moves"></div>
+      <div class="resp"><div class="bound"><b><span class="a">Bound mind</span><span class="k">Sticky hands</span></b><span id="boundTxt"></span></div><div class="freed"><b><span class="a">Free mind</span><span class="k">Open hands</span></b><span id="freeTxt"></span></div></div>
+    </div>
+    <div class="panel">
+      <div class="knot">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="48" fill="none" stroke="var(--line)" stroke-width="2"/><text x="60" y="72" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="40" fill="var(--gold)">अहं</text></svg>
+        <div><h3 class="a">The root: the word "I"</h3><h3 class="k">The sticky word: "ME!"</h3><p class="muted iast" style="font-style:normal">yadā nāhaṃ tadā mokṣo</p></div>
+      </div>
+      <p class="a">All six movements need someone they belong to: "I want", "I lost", "that's mine". Verse 8.4 cuts to that root. When there is no "I", there is freedom; when there is "I", there is bondage. The advice that follows is gentle: knowing this, lightly, grab nothing and push nothing away. The word Ashtavakra uses is <i>helayā</i>, "playfully, without effort".</p>
+      <p class="k">Every sticky feeling starts with "ME! MINE!" When we stop shouting "me, me, me" inside, we feel free, like a bird. You can still have toys and friends. You just don't squeeze them so tight.</p>
+      <p class="verse-ref">8.1 · It is bondage when the mind wants something, grieves over something, rejects something, holds on to something, is thrilled by something or angry at something.<br>8.4 · When there is no "I", there is freedom. When there is "I", there is bondage.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- VERSES -->
+<section class="s" id="verses"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Read the source</div>
+    <h2 class="a">Fourteen verses that carry the book</h2><h2 class="k">The best little poems from the book</h2>
+    <p class="a">Sanskrit in Devanagari and transliteration, a plain English rendering, and a one-line version for a child. Translations here are paraphrases written for clarity; compare them with a scholarly translation for close study.</p>
+    <p class="k">These are the most famous lines. The yellow box says each one in kid words.</p>
+  </div>
+  <div class="v-tools"><button class="btn" type="button" id="sktToggle" aria-pressed="true">Hide Sanskrit</button><span class="muted" style="font-size:.9rem">A = Ashtavakra speaks · J = Janaka speaks</span></div>
+  <div class="verses" id="verseList"></div>
+</div></section>
+
+<!-- COMPARE -->
+<section class="s" id="compare"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Two Gitas</div>
+    <h2 class="a">How it differs from the Bhagavad Gita</h2><h2 class="k">Two famous "song" books</h2>
+    <p class="a">"Gītā" just means "song". The Bhagavad Gita is the famous one; the Ashtavakra Gita is shorter, stranger, and far more radical. They agree on the goal and disagree on the road.</p>
+    <p class="k">There's another famous book called the Bhagavad Gita. Both talk about being free and happy, but in different ways.</p>
+  </div>
+  <div class="cmp-wrap"><table class="cmp">
+    <thead><tr><th></th><th>Ashtavakra Gita</th><th>Bhagavad Gita</th></tr></thead>
+    <tbody>
+      <tr><th>Setting</th><td>A royal court, in peacetime</td><td>A battlefield, just before war</td></tr>
+      <tr><th>Speakers</th><td>A young sage and King Janaka</td><td>Krishna and the warrior Arjuna</td></tr>
+      <tr><th>Length</th><td>298 verses, 20 chapters</td><td>700 verses, 18 chapters</td></tr>
+      <tr><th>The question</th><td>"How do I become free?"</td><td>"What is my duty, and how do I act?"</td></tr>
+      <tr><th>The answer</th><td>You already are. Recognise it.</td><td>Act without attachment; devote, know, meditate.</td></tr>
+      <tr><th>Paths offered</th><td>One: direct recognition</td><td>Several: action, devotion, knowledge, meditation</td></tr>
+      <tr><th>On practice</th><td>Warns that striving for a special state can itself be bondage (1.15)</td><td>Prescribes disciplined practice step by step</td></tr>
+      <tr><th>God</th><td>Rarely mentioned; the focus is the Self</td><td>Central: Krishna reveals himself as God</td></tr>
+      <tr><th>Part of the Mahābhārata?</th><td>No. A separate text, though its characters come from the epic</td><td>Yes, in the Bhishma Parva</td></tr>
+    </tbody>
+  </table></div>
+  <div class="paths">
+    <figure>
+      <svg viewBox="0 0 300 150" aria-hidden="true"><path d="M20,130 L60,130 L60,108 L100,108 L100,86 L140,86 L140,64 L180,64 L180,42 L220,42 L220,20 L280,20" fill="none" stroke="var(--indigo)" stroke-width="4" stroke-linejoin="round"/><circle cx="40" cy="120" r="8" fill="var(--gold)"/><text x="268" y="14" text-anchor="end" font-size="12" fill="var(--muted)" font-family="Figtree,sans-serif">goal</text></svg>
+      <figcaption><b>Gradual path.</b> <span class="a">Climb step by step: purify, practise, progress. This is how most traditions, including large parts of the Bhagavad Gita, describe the journey.</span><span class="k">Climbing stairs, one step at a time.</span></figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 300 150" aria-hidden="true"><circle cx="150" cy="75" r="56" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 6"/><circle cx="150" cy="75" r="10" fill="var(--gold)"/><path d="M118,75 Q150,52 182,75 Q150,98 118,75 Z" fill="none" stroke="var(--indigo)" stroke-width="3"/><text x="150" y="146" text-anchor="middle" font-size="12" fill="var(--muted)" font-family="Figtree,sans-serif">already here; open your eyes</text></svg>
+      <figcaption><b>Direct path.</b> <span class="a">Ashtavakra says you are already at the top with your eyes closed. Freedom is the end of a mistake, so it can happen "right now" (<i>adhunaiva</i>, 1.4).</span><span class="k">You're already at the top. You just need to open your eyes!</span></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<!-- OSHO -->
+<section class="s" id="osho"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">The text and its most famous commentary</div>
+    <h2 class="a">The Ashtavakra Gita vs Osho's Mahageeta</h2><h2 class="k">The little book and the long story-teller</h2>
+    <p class="a">In 1976–77 the teacher Osho gave 91 talks in Hindi on this text in Pune, published as the <i>Ashtavakra Mahageeta</i> ("the Great Gita"). For many Indian readers this is how they first meet Ashtavakra. This comparison is built from the transcripts of all 90 talks that are available, about 1.07 million words, read against the 298 verses.</p>
+    <p class="k">There is the little book of poems. And there is a man called Osho who talked about it for a very, very long time, like a grandpa telling stories about a short poem.</p>
+  </div>
+
+  <div class="verdict">
+    <div class="eyebrow">The verdict</div>
+    <h3 class="a">Read the Gita first. Then listen to Osho, one chapter at a time.</h3>
+    <h3 class="k">Read the little book first. Then listen to the stories.</h3>
+    <p class="a">The original is better for understanding: exact, complete, and finished in an evening. Osho is better for being moved. He takes one verse and spends an hour and a half making you feel it. But he speaks <i>about</i> the text, brings in a whole world of other teachers, and adds strong opinions the text never states. Know the source first, and you will hear exactly where Ashtavakra ends and Osho begins.</p>
+    <p class="k">The little book tells you the secret. The stories help you feel it. Hear the secret first, so you know what the stories are about.</p>
+    <div class="row"><span class="pill">For understanding: the original</span><span class="pill">For inspiration: Osho</span><span class="pill">For explaining to a child: the original</span><span class="pill">For daily practice: Osho, with care</span></div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">The size difference</h3><h3 class="k">How long does each one take?</h3>
+    <p class="a">Each square is one hour. The talks average about 11,900 Hindi words, roughly an hour and a half each, so the series runs to about 140 hours. That is around 3,600 spoken words for every single verse.</p>
+    <p class="k">Each little square is one hour. Count them!</p>
+    <div class="dotrow"><div><b>The Ashtavakra Gita</b><span class="muted">298 verses · about 1.5 hours to read</span></div><div class="dots t" id="dotsT" aria-label="About 1.5 hours"></div></div>
+    <div class="dotrow"><div><b>Osho's Mahageeta</b><span class="muted">91 talks · about 140 hours to hear</span></div><div class="dots o" id="dotsO" aria-label="About 140 hours"></div></div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">All 91 talks, mapped to the text</h3><h3 class="k">Which talk is about which chapter?</h3>
+    <p class="a">The series keeps a strict rhythm. Odd-numbered talks go through the verses in order, about six at a time, from 1.1 to 20.14. Even-numbered talks answer listeners' questions. Pick a chapter to see its talks; chapter 18 alone fills talks 55 to 86, a third of the series.</p>
+    <p class="k">Tap a number to see which talks are about that chapter.</p>
+    <div class="tkey"><span><i style="background:color-mix(in oklab,var(--series-j) 22%,var(--surface))"></i>Talk on verses</span><span><i style="background:var(--surface)"></i>Questions and answers</span><span><i style="background:var(--series-j)"></i>Selected chapter</span></div>
+    <div class="chchips" id="chChips" role="group" aria-label="Choose a chapter"></div>
+    <div class="tmap" id="tmap" aria-label="Map of the 91 talks"></div>
+    <div class="guide" id="guide" aria-live="polite"></div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">Who else is in the room</h3><h3 class="k">Who else does Osho talk about?</h3>
+    <p class="a">The Ashtavakra Gita names no one but its two speakers (and, once, the gods Shiva, Vishnu and Brahma, 16.11). Osho's talks are a crossroads of world spirituality. Buddha comes up in 88 of the 90 transcripts, more often than Janaka, who is actually in the text.</p>
+    <p class="k">The little book only has the boy and the king. Osho talks about lots of other wise people too, like Buddha and Jesus, and tells funny stories about Mulla Nasruddin.</p>
+    <div class="score-box">
+      <div class="legend" style="margin-bottom:8px"><span><i style="background:var(--series-a)"></i>A speaker in the text</span><span><i style="background:var(--series-j)"></i>Brought in by Osho</span></div>
+      <div class="score-scroll"><svg id="who" viewBox="0 0 640 470" role="img" aria-label="Number of talks, out of 90, that mention each figure"></svg></div>
+      <p class="muted" style="font-size:.82rem;margin-top:8px">Number of talk transcripts, out of 90, in which each name appears at least once. Counted by exact name search in the Hindi text, so treat the figures as close approximations.</p>
+    </div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">Same verse, two voices</h3><h3 class="k">The poem, and what Osho said about it</h3>
+    <p class="a">Left: what the verse says. Right: what Osho says about it, in his Hindi with an English translation. Below: what he adds, and where he goes beyond the text.</p>
+    <p class="k">On the left, the little book. On the right, Osho. Underneath, what's different.</p>
+    <div class="pairs">
+      <div class="pair"><div><span class="who t">Text · 1.2</span><blockquote>If you want freedom, treat the objects of the senses like poison, and drink forgiveness, honesty, kindness, contentment and truth like nectar.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 1</span><blockquote lang="hi" class="hi">विषय का अर्थ होता है, जिसे खाने से हम बार-बार मरते हैं।</blockquote><blockquote>"A sense object (<i>viṣaya</i>) is that which, when we consume it, we die again and again."</blockquote><blockquote lang="hi" class="hi">कुटिलता विष है; सीधा-सरलपन, आर्जव अमृत है।</blockquote><blockquote>"Crookedness is poison; straightforward simplicity is nectar."</blockquote></div>
+        <div class="take"><b>What he adds:</b> <span class="a">he builds on the sound-link between <i>viṣaya</i> (sense object) and <i>viṣa</i> (poison), and moves the poison inside. It is not the world that kills but the endless craving for more of it. That steers the verse away from "run from the world", which suits both the text and Janaka, who never left his throne.</span><span class="k">He says the poison isn't toys or sweets. It's always wanting MORE. Being simple and kind is the yummy medicine.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · 1.7</span><blockquote>You are the one seer of all, always free. Your bondage is only this: you see the seer as something else.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 3 (English edition)</span><blockquote>"Your bondage is this: you see the other, not yourself, as the observer."</blockquote></div>
+        <div class="take"><b>What he adds:</b> <span class="a">a social twist. Osho extends "the other as observer" to living through other people's eyes and opinions, so the verse becomes a diagnosis of approval-seeking. It is illuminating, and it is his extension.</span><span class="k">He says: we feel stuck when we worry what everyone else thinks of us.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · 1.15</span><blockquote>You are unattached, actionless, self-shining and spotless. Your bondage is just this: you keep practising <i>samādhi</i>.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 5</span><blockquote lang="hi" class="hi">पतंजलि कहते हैं, चित्त-वृत्तियों को शांत करो तो तुम आत्मा को जान लोगे। अष्टावक्र कहते हैं, आत्मा को जान लो, चित्त-वृत्तियां शांत हो जायेंगी।</blockquote><blockquote>"Patanjali says: quiet the movements of the mind and you will know the Self. Ashtavakra says: know the Self, and the movements of the mind will quiet down."</blockquote></div>
+        <div class="take"><b>Where they pull apart:</b> <span class="a">this is Osho at his clearest. Yoga works from the mind toward the Self; Ashtavakra works from the Self outward, like lighting a lamp instead of fighting the darkness with swords (his image). Yet the question-and-answer talk the day before is titled "Meditation: The Only Medicine", and Osho was famous for meditation techniques. His bridge is that medicine is for an illness and is put away once you are well. The text itself offers no such bridge; it simply says practice can bind.</span><span class="k">Other teachers say, "Make your mind quiet, then you'll find yourself." Ashtavakra says, "Find yourself, and your mind gets quiet by itself." Like switching on a light instead of chasing the dark away.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · 6.1–6.4</span><blockquote>I am endless like space; the world is like a pot. Knowing this, there is nothing to give up, nothing to grab, nothing to destroy.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 21</span><blockquote lang="hi" class="hi">एक लंगोटी काफी है; कोई साम्राज्य नहीं चाहिए पकड़ने को। ... त्याग भी आदमी पकड़ ले सकता है।</blockquote><blockquote>"A loincloth is enough; you don't need an empire to cling to. ... A person can cling even to renunciation."</blockquote></div>
+        <div class="take"><b>What he adds:</b> <span class="a">a sharp warning against spiritual showing-off, told through a Sufi story of a proud friend who became a famous naked ascetic. It fits the verse's "nothing to give up" closely. This theme, renunciation as another form of grasping, runs through the series: the word for renunciation (<i>tyāg</i>) appears in 64 of the 90 talks.</span><span class="k">He says: giving everything away to show off is still grabbing. Grabbing "I'm so good!" instead of toys.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · 8.4</span><blockquote>When there is no "I", there is freedom. When there is "I", there is bondage. Knowing this, grab nothing and push nothing away.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 25</span><blockquote lang="hi" class="hi">सरल, अनूठे, पर अति कठिन! जितने सरल उतने कठिन। ... कठिन को तो करने में अहंकार को रस आता है।</blockquote><blockquote>"Simple, unique, yet extremely hard! As hard as they are simple. ... The ego takes delight in doing what is difficult."</blockquote></div>
+        <div class="take"><b>What he adds:</b> <span class="a">a reason why the shortest teaching is the hardest to take: the ego wants a challenge it can win. He illustrates it with Diogenes asking Alexander what he will do after conquering the world ("Then we'll rest"). The insight is his, and it explains why chapter 8 is only four verses long.</span><span class="k">He says: we like hard things because we can show off. But this one is easy, and that's why it's tricky!</span></div></div>
+      <div class="pair"><div><span class="who t">Text · 16.11</span><blockquote>Even if Shiva, Vishnu or Brahma were your teacher, you would not rest in yourself until you forgot <i>everything</i>.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 47</span><blockquote lang="hi" class="hi">जब तक तू सब न भूल जाये जो बाहर से सीखा ... न रहो हिंदू न मुसलमान न ईसाई न जैन न बौद्ध।</blockquote><blockquote>"Until you forget all that you learned from outside ... be neither Hindu nor Muslim nor Christian nor Jain nor Buddhist."</blockquote></div>
+        <div class="take"><b>Where he goes beyond it:</b> <span class="a">the Sanskrit says simply "forgetting everything" (<i>sarva-vismaraṇa</i>). Osho narrows it to what you learned "from outside", then widens it into dropping every religious label. That is a bold, characteristic Osho move, and a defensible one, but the verse itself names no religions.</span><span class="k">The little book says: forget everything and just be. Osho adds: and don't worry about which religion you belong to.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · everywhere</span><blockquote>Never mentions Krishna or the Bhagavad Gita, and never compares itself with any other teaching.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 1</span><blockquote lang="hi" class="hi">कृष्ण की गीता खिचड़ी जैसी है ... कुटिल राजनीतिज्ञ थे, डिप्लोमैट थे।</blockquote><blockquote>"Krishna's Gita is like <i>khichdi</i> [a mixed porridge] ... he was a cunning politician, a diplomat."</blockquote></div>
+        <div class="take"><b>Where he goes beyond it:</b> <span class="a">this is Osho's polemic, not Ashtavakra's. He argues the Bhagavad Gita became popular because everyone can find their own path in it, while Ashtavakra makes no compromise. Stirring, and sometimes unfair. Krishna still comes up in 72 talks, so the comparison is a running thread, not a one-off.</span><span class="k">Osho says this book is better than another famous book. That's his opinion! The little book never says that about itself.</span></div></div>
+      <div class="pair"><div><span class="who t">Text · chapter 20</span><blockquote>Janaka's last verses ask "where?" again and again (where is bondage, where is freedom, where is teacher or student?) and the book ends in silence.</blockquote></div>
+        <div class="ov"><span class="who o">Osho · talk 91, the last</span><blockquote lang="hi" class="hi">बस इतना ही सारसूत्र है अष्टावक्र और जनक के इस परम संवाद का, इतना ही--स्मृति लौट आयी।</blockquote><blockquote>"Just this is the essence of this supreme dialogue between Ashtavakra and Janaka, just this: memory returned."</blockquote></div>
+        <div class="take"><b>What he adds:</b> <span class="a">a one-line summary of the whole book: nothing was gained, something was remembered. There is an irony here. "Memory regained" (<i>smṛtir labdhā</i>) is what Arjuna says at the very end of the Bhagavad Gita (18.73), the book Osho spent his first talk criticising.</span><span class="k">At the very end, Osho says the whole story is about one thing: the king remembered who he really was.</span></div></div>
+    </div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">What the question-and-answer talks are</h3><h3 class="k">The question days</h3>
+    <p class="a">Half the series answers questions from Osho's listeners, who address him as "Bhagwan". Many questions are about their own meditation experiences ("during yesterday's talk I felt I was not on this earth") or about the practices of his movement, such as whether ochre robes and the mala help (talk 4). These talks are pastoral guidance for a community as much as commentary. If you want Ashtavakra, the odd-numbered talks are the core; the even ones are optional.</p>
+    <p class="k">On question days, people told Osho how they felt, and he answered them. Those are extra. The poem days are the main ones.</p>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">Scorecard</h3><h3 class="k">Who is better at what?</h3>
+    <p class="a">This guide's assessment, from 1 (weak) to 5 (strong), for someone starting from zero. They are good at opposite things.</p>
+    <p class="k">Five dots means really good. One dot means not so good.</p>
+    <div class="score-box">
+      <div class="legend" style="margin-bottom:8px"><span><i style="background:var(--series-a)"></i>Ashtavakra Gita</span><span><i style="background:var(--series-j)"></i>Osho's Mahageeta</span></div>
+      <div class="score-scroll"><svg id="score" viewBox="0 0 640 330" role="img" aria-label="Scorecard comparing the two on seven criteria"></svg></div>
+    </div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">Which one is right for you?</h3><h3 class="k">Pick what you want</h3>
+    <div class="chooser">
+      <div class="goals" id="goals" role="group" aria-label="Your goal"></div>
+      <div class="pickcard" id="pick" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="o-block">
+    <h3 class="a">A three-week plan that uses both</h3><h3 class="k">A plan for three weeks</h3>
+    <div class="plan">
+      <div><b class="wk">Week 1</b><b class="a">The source</b><b class="k">The little book</b><span class="a">Read the whole original, 20 minutes a day, alongside this page. Mark the verses that confuse you or move you most.</span><span class="k">A grown-up reads you a few lines each night, then you play one of the games on this page.</span></div>
+      <div><b class="wk">Week 2</b><b class="a">Osho, on your verses only</b><b class="k">The stories</b><span class="a">Use the talk map above to find the talks on the chapters you marked. Listen to those verse talks only, one a day. Talks 1, 5, 25 and 47 are strong places to start.</span><span class="k">The grown-up listens to the stories and tells you the best one.</span></div>
+      <div><b class="wk">Week 3</b><b class="a">Back to the text</b><b class="k">Back to the little book</b><span class="a">Re-read the same chapters. For each insight, ask: is this in the verse, or did Osho add it? Keep both, but know which is which.</span><span class="k">Read it again. Do you understand it better now?</span></div>
+    </div>
+  </div>
+
+  <p class="src" style="margin-top:22px">Sources: Hindi transcripts of the 91 talks of <i>Ashtavakra Mahageeta</i> as published on oshoworld.com (talk 28's transcript is not available there, so figures use 90 talks); the English edition <i>The Mahageeta, Volume 1</i> (talks 1–10, 11–20 September 1976) for the 1.7 quotation. English translations of the Hindi were made for this guide. Listening times are estimates from word counts.</p>
+</div></section>
+
+<!-- MYTHS -->
+<section class="s" id="myths"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Read it carefully</div>
+    <h2 class="a">Four common misreadings</h2><h2 class="k">Things it does NOT mean</h2>
+    <p class="a">A text this radical is easy to bend into something convenient. The verses themselves block these readings.</p>
+    <p class="k">Some people get the secret a bit wrong. Here's what it does NOT say.</p>
+  </div>
+  <div class="myths">
+    <div class="myth"><p class="q a">"Nothing matters, so I can do anything."</p><p class="q k">"Then I can be mean!"</p><p class="a">The very first instruction (1.2) asks for forgiveness, honesty, kindness, contentment and truth, "like nectar". Chapter 3 scolds Janaka for any leftover greed. Seeing through the ego makes cruelty pointless, because cruelty is the ego's work.</p><p class="k">No! The wise boy says the first thing to do is be kind, honest and forgiving. People who feel free are usually the kindest.</p></div>
+    <div class="myth"><p class="q a">"It says the world is fake."</p><p class="q k">"So my family isn't real?"</p><p class="a">It says the world is not <i>separate</i> from awareness, as waves are not separate from water (2.4). The snake vanishes; the rope remains. What dissolves is the sense of a threatening "other".</p><p class="k">Your family is real and you love them! The book means everyone is made of the same "water", like waves in one ocean.</p></div>
+    <div class="myth"><p class="q a">"Meditation is useless."</p><p class="q k">"So sitting quietly is silly?"</p><p class="a">Verse 1.15 warns against practising <i>in order to become</i> something, because that keeps the "I who is not there yet" alive. Quiet sitting is fine; treating it as a ladder to a freedom you lack is the trap.</p><p class="k">Sitting quietly is lovely! Just don't worry about doing it "perfectly". You are already okay.</p></div>
+    <div class="myth"><p class="q a">"It's only for monks in caves."</p><p class="q k">"Only grown-ups can understand it."</p><p class="a">The student is a working king with a court, family and wars to manage. Chapter 18 describes the free person acting fully in the world, "like a child", without the burden of "I am doing this".</p><p class="k">The teacher was a kid, and he taught a king! You can get it too.</p></div>
+  </div>
+</div></section>
+
+<!-- TRY -->
+<section class="s" id="try"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">One minute</div>
+    <h2 class="a">Try the witness for sixty seconds</h2><h2 class="k">The Watcher Game</h2>
+    <p class="a">This is not a technique to gain anything. It is a way to check verse 1.4 for yourself: "if you just rest in awareness, seeing yourself as distinct from the body, right now you will be happy and at peace."</p>
+    <p class="k">Play this with a grown-up. Sit still, press start, and follow the words.</p>
+  </div>
+  <div class="try">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" stroke-width="6"/><circle id="ring" cx="60" cy="60" r="52" fill="none" stroke="var(--gold)" stroke-width="6" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/><text id="secs" x="60" y="70" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="30" fill="var(--ink)">60</text></svg>
+    <div style="display:grid;gap:14px;min-width:0">
+      <p id="prompt"></p>
+      <div class="controls"><button class="btn primary" type="button" id="startTry">Start</button><button class="btn" type="button" id="resetTry">Reset</button></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- BEDTIME -->
+<section class="s" id="bedtime"><div class="wrap">
+  <div class="bed">
+    <div class="eyebrow">For you to tell · about 10 minutes</div>
+    <h2 style="font-size:var(--step-3);margin-top:6px">Explaining it to a 5-year-old</h2>
+    <p style="max-width:66ch;margin-top:8px">A ready-made script. Use real objects; young children understand with their hands first. Say the bold lines, do the actions, then ask the question and wait for their answer. There are no wrong answers.</p>
+    <div class="props"><span>A bowl of water</span><span>A piece of string</span><span>A torch or phone light</span><span>A paper cup</span><span>A banana (yes, really)</span></div>
+    <div class="player" id="player">
+      <button class="pbtn" type="button" id="pPlay" aria-label="Play the bedtime story"><svg viewBox="0 0 24 24" id="pIcon"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+      <div class="ptrack">
+        <span class="now" id="pNow">Listen to the story · about 2½ minutes</span>
+        <div class="pbar"><i id="pBar"></i></div>
+        <span class="sub">A warm, deep storyteller's voice reads each step and pauses so your child can answer.</span>
+      </div>
+      <label class="popt" for="pStepwise"><input type="checkbox" id="pStepwise"> Pause after each step, so I can do the action</label>
+    </div>
+    <audio id="narr" preload="none"></audio>
+    <ol class="steps">
+      <li><p class="say"><b>"Once there was a boy whose body was bent in eight places. People laughed at him. But he was the wisest person in the whole kingdom."</b></p><p class="do"><b>Do:</b> Hold up a curvy banana.</p><p class="ask"><b>Ask:</b> "Is a bendy banana less yummy than a straight one?" (The inside matters, not the outside.)</p></li>
+      <li><p class="say"><b>"A king asked the boy, 'How can I be happy all the time, and never feel stuck?' The boy said, 'You already are! Let me show you.'"</b></p><p class="ask"><b>Ask:</b> "When do you feel stuck or grumpy?"</p></li>
+      <li><p class="say"><b>"Look! Each wave thinks it's all alone. But every wave is made of water. When a wave goes down, it doesn't disappear. It goes back into the big water."</b></p><p class="do"><b>Do:</b> Make little waves in the bowl with your finger.</p><p class="ask"><b>Ask:</b> "Is this wave water? Is that one? Are you and me made of the same 'water' too?"</p></li>
+      <li><p class="say"><b>"Feelings are like clouds. There's an angry cloud, a sad cloud, a happy cloud. They float by. But you are the big sky. Clouds can't hurt the sky."</b></p><p class="do"><b>Do:</b> Point at the sky, or draw a sky with clouds.</p><p class="ask"><b>Ask:</b> "What colour cloud do you feel today? Is the sky still there behind it?"</p></li>
+      <li><p class="say"><b>"In the dark, things can look scary. But when we turn on the light..."</b></p><p class="do"><b>Do:</b> Dim the lights, wiggle the string on the floor, "Is it a snake?!", then switch on the torch.</p><p class="ask"><b>Ask:</b> "Was there ever a snake? Did we have to fight it?"</p></li>
+      <li><p class="say"><b>"This cup has air inside. If I squish the cup, where does the air go?"</b></p><p class="do"><b>Do:</b> Squash the paper cup gently.</p><p class="ask"><b>Ask:</b> "Did the air get hurt? Your body is like the cup. The real you is like the air and the sky."</p></li>
+      <li><p class="say"><b>"Let's play the Watcher Game. Close your eyes. Listen. Can you hear a sound? Who's hearing it? There's a quiet you inside that notices everything. That watcher is always okay."</b></p><p class="ask"><b>Ask:</b> "Can the watcher get scared? Can it get old?"</p></li>
+      <li><p class="say"><b>"Goodnight. It's okay to feel sad or cross sometimes. Feelings are clouds. You are the sky. You are already okay, just as you are."</b></p></li>
+    </ol>
+    <p style="margin-top:16px;font-size:.92rem"><b>A tip:</b> never use the sky idea to brush off a child's real feelings. Name the feeling first ("You're really sad"), comfort them, and only later, when they're calm, play the cloud game.</p>
+  </div>
+</div></section>
+
+<!-- WORDS -->
+<section class="s" id="words"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Small dictionary</div>
+    <h2 class="a">Twelve words that unlock the text</h2><h2 class="k">Big words, made small</h2>
+  </div>
+  <div class="gloss" id="gloss"></div>
+</div></section>
+
+<!-- HISTORY -->
+<section class="s" id="history"><div class="wrap">
+  <div class="s-head">
+    <div class="eyebrow">Where it came from</div>
+    <h2 class="a">History, influence, and how to read it</h2><h2 class="k">Where did this book come from?</h2>
+  </div>
+  <div class="hist">
+    <div class="prose" style="display:grid;gap:14px">
+      <p class="a">Also called the <i>Aṣṭāvakra Saṃhitā</i>, it belongs to <b>Advaita Vedānta</b>, the Indian school that holds reality is "not-two": the Self (<i>ātman</i>) and the absolute (<i>brahman</i>) are one. Its author and date are unknown. Proposed dates range from soon after the Bhagavad Gita to the 14th century CE; many scholars place it in the medieval period, in the milieu of Śaṅkara's Advaita (8th century onward).</p>
+      <p class="a">Its characters are older than the text. Janaka appears in the Upaniṣads as the king who questions the sage Yājñavalkya, and Ashtavakra's life story is in the Mahābhārata. The Gita borrows these figures to stage a teaching with no rituals, no gods to please and no stages to climb.</p>
+      <p class="a">Its modern fame owes much to Ramakrishna, who had the young Narendranath (later Swami Vivekananda) read it aloud; the young man at first found its claims shocking. Ramana Maharshi cited it, Osho gave a long lecture series on it (<i>Mahāgītā</i>), and English readers know it through Thomas Byrom's <i>The Heart of Awareness</i>, Bart Marshall's version, John Richards's free translation and Swami Nityaswarupananda's Sanskrit-English edition.</p>
+      <p class="k">Nobody knows who wrote it or exactly when. It's very old, hundreds and hundreds of years. Many famous teachers in India loved it and read it to their students.</p>
+    </div>
+    <div>
+      <h3 style="margin-bottom:12px"><span class="a">A reading route for a beginner</span><span class="k">If you want to read it with a grown-up</span></h3>
+      <ol class="route">
+        <li><b>1</b><span><span class="a">The whole teaching, compressed. Read it twice.</span><span class="k">The boy tells the secret.</span></span></li>
+        <li><b>2</b><span><span class="a">Janaka's "Aho!" What recognition feels like.</span><span class="k">The king says "Wow!"</span></span></li>
+        <li><b>8</b><span><span class="a">Four verses on bondage and freedom.</span><span class="k">Sticky hands and open hands.</span></span></li>
+        <li><b>15</b><span><span class="a">The ocean image, extended.</span><span class="k">You are the ocean.</span></span></li>
+        <li><b>18</b><span><span class="a">The hundred-verse finale; dip in anywhere.</span><span class="k">100 tiny poems about peace.</span></span></li>
+        <li><b>20</b><span><span class="a">"Where is…?" Everything falls silent.</span><span class="k">The king finds no more problems.</span></span></li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap" style="display:grid;gap:6px;max-width:80ch"><b style="color:var(--ink)">About this guide</b><span>Verse references are chapter.verse. The English renderings of the verses are paraphrases written for clarity; for close study, use a full translation alongside the Sanskrit. The Sanskrit was cross-checked against the verse text quoted in Osho's talks.</span><span>Osho quotations come from the Hindi transcripts of the <i>Ashtavakra Mahageeta</i> on oshoworld.com (translated for this guide) and from the English edition <i>The Mahageeta, Volume 1</i>. They are short excerpts for comparison; the full talks are linked in the talk map.</span><span>Bedtime narration uses the open-source Kokoro-82M voice model ("Onyx" voice), released under the Apache 2.0 license.</span></div></footer>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isKid=()=>document.documentElement.classList.contains('kid');
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- mode ---------- */
+const listeners=[];
+function setMode(m){
+  document.documentElement.classList.toggle('kid',m==='kid');
+  $$('.mode button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===m)));
+  try{localStorage.setItem('ag-mode',m)}catch(e){}
+  listeners.forEach(f=>f());
+}
+$$('.mode button').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
+$('#heroKid').addEventListener('click',()=>setMode(isKid()?'adult':'kid'));
+try{const m=localStorage.getItem('ag-mode'); if(m==='kid')document.documentElement.classList.add('kid'),$$('.mode button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='kid')))}catch(e){}
+
+/* ---------- hero bend line ---------- */
+const bentD="M20,85 L60,40 L100,120 L140,45 L180,125 L220,40 L260,128 L300,48 L340,118 L380,85";
+const straightD="M20,85 L60,85 L100,85 L140,85 L180,85 L220,85 L260,85 L300,85 L340,85 L380,85";
+const bendPts=[[60,40],[100,120],[140,45],[180,125],[220,40],[260,128],[300,48],[340,118]];
+const dots=$('#bendDots');
+bendPts.forEach((p,i)=>{const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',p[0]);c.setAttribute('cy',p[1]);c.setAttribute('r',5);c.style.transition='cy 1.6s cubic-bezier(.6,.1,.2,1)';dots.appendChild(c);
+  const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',p[0]);t.setAttribute('y',p[1]<85?p[1]-12:p[1]+22);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','12');t.setAttribute('fill','var(--muted)');t.setAttribute('font-family','Figtree,sans-serif');t.textContent=i+1;t.style.transition='opacity .6s';t.classList.add('bn');dots.appendChild(t);});
+let straight=false;
+$('#bendSvg').addEventListener('click',()=>{straight=!straight;$('#bendLine').setAttribute('d',straight?straightD:bentD);
+  $$('#bendDots circle').forEach((c,i)=>c.setAttribute('cy',straight?85:bendPts[i][1]));$$('#bendDots .bn').forEach(t=>t.style.opacity=straight?0:1);});
+
+/* ---------- chapters ---------- */
+const CH=[
+ [1,'Instruction on Self-Realisation','A',20,'Janaka asks three questions: how to gain knowledge, freedom and dispassion. Ashtavakra answers at once. Be kind and honest; know you are not the elements but the witness-awareness; you are already free, and bondage is only the belief that you are bound.','The boy says: you are not your body. You are the watcher inside, and you are already free.','1.3'],
+ [2,'Joy of Self-Realisation','J',25,'Janaka wakes up and cannot stop exclaiming "Aho!" (Wonder!). He is spotless, at peace, pure awareness; the world rises in him like waves in water, like a snake seen in a rope. He even salutes himself: "Wonderful am I! Salutations to me!"','The king understands and shouts, "Wow! I am like the big ocean!"','2.1'],
+ [3,'Test of Self-Realisation','A',14,'Ashtavakra probes the king. If you really know the Self, why do greed, desire and fear still find a foothold? Craving wealth after knowing the Self is like craving silver you saw in mother-of-pearl.','The boy checks: "If you really get it, why are you still greedy and scared?"','3.2'],
+ [4,'Glorification of Self-Realisation','J',6,'Janaka answers the test: one who knows the Self plays the game of life freely. Virtue and vice do not stick to him, as smoke does not stain the sky.','The king says: someone who knows plays in the world like a kid in a playground.','4.1'],
+ [5,'Four Ways of Dissolution','A',4,'Four short verses, each ending "go to dissolution" (layaṃ vraja). You touch nothing; the world rises in you like bubbles; the world is a snake in a rope; you are equal in pleasure and pain. So melt.','Four ways of saying: relax and melt, like sugar in water.','5.1'],
+ [6,'The Higher Knowledge','A',4,'I am like space, the world like a pot; I am the ocean, the world its waves; I am mother-of-pearl, the world its illusory silver; I am in all beings and all beings in me. Each time: nothing to renounce, accept or dissolve.','You are like the big sky. The world is like a little pot sitting in it.','6.1'],
+ [7,'The Nature of Self-Realisation','J',5,'Janaka describes himself as the boundless ocean on which the ship of the world drifts with its own winds. Worlds rise and sink; nothing is gained or lost in him.','The world is a little boat bobbing on my ocean. Let it bob!','7.1'],
+ [8,'Bondage and Liberation','A',4,'The book\'s crispest definition. Bondage is the mind wanting, grieving, rejecting, grasping, delighting or raging about anything. Freedom is its absence. And the root: "When there is no I, there is freedom."','Stuck = sticky hands. Free = open hands.','8.4'],
+ [9,'Indifference','A',8,'Seeing that the pairs of opposites, done and not-done, never end, the wise grow quietly indifferent (nirveda). Sages hold endless different opinions; stop chasing and rest.','Everyone argues about what is right. Stop chasing; be calm.','9.1'],
+ [10,'Quietude','A',8,'Drop desire and the hunt for wealth, and even righteousness pursued as a project. Everything seen is like a dream or a magic show. Desire alone is the root of the world-cycle.','Wanting more and more never ends. Wanting less makes you happy.','10.1'],
+ [11,'Wisdom','A',8,'Things arise and pass according to their own nature. One who sees this stays undisturbed by gain and loss, birth and death, and knows: "I am awareness."','Things happen the way they happen. Knowing this, you stay calm.','11.1'],
+ [12,'Abiding in the Self','J',8,'Janaka recounts the order of his letting go: first bodily restlessness, then excessive speech, then thought itself. Now he simply abides as he is.','The king says: first I stopped fidgeting, then talking too much, then over-thinking. Now I just am.','12.1'],
+ [13,'Happiness','J',7,'Lying, sitting or walking, nothing is gained or lost. Rare is the inner freedom that comes from owning nothing even in the middle of everything. "So I live happily."','Sitting, walking or lying down, I am happy.','13.1'],
+ [14,'Tranquillity','J',4,'One whose mind is empty of desires: what does he care for friends, wealth or scriptures? He seems like others outside, yet inside he is like a sleeper who has woken.','When your mind is not full of wanting, you are like a quiet, happy lake.','14.1'],
+ [15,'Knowledge of the Self','A',20,'A pure mind gets it from a passing word; another searches for life. You are the ocean; let worlds rise and fall. Do not agitate the mind with "yes" and "no". You are pure awareness, and the world is not separate from you.','You do not have to search far away. You are the ocean already.','15.1'],
+ [16,'Special Instruction','A',11,'You may read and discuss scripture all you like, but you will not rest in yourself until you forget everything. Effort itself is a source of misery. Even if Shiva, Vishnu or Brahma were your teacher, there is no rest without forgetting all.','You can read every book, but you only rest when you stop trying so hard.','16.11'],
+ [17,'The True Knower','A',20,'A portrait of the free person: content, without craving, seeing no real difference between things, acting without the sense of doing, neither attracted nor repelled.','This is what a truly free person looks like: kind, calm and not grabby.','17.1'],
+ [18,'Peace','A',100,'A third of the book. It opens with a salutation to That which is bliss, peace and light, then circles the whole teaching again: the liberated one (jīvanmukta) acts like a child, like a dry leaf carried by the wind, free of "I do".','The biggest chapter: 100 little poems about being peaceful, like a leaf floating on the wind.','18.1'],
+ [19,'Repose in the Self','J',8,'Janaka: "With the tongs of true knowledge I have pulled out of my heart the thorn of many opinions." What is past, future, near or far for one resting in his own glory?','The king says: I pulled the thorn of too-many-opinions out of my heart.','19.1'],
+ [20,'Liberation-in-Life','J',14,'A string of questions beginning "kva", where? Where are the elements, the body, the mind? Where is bondage, where is liberation, where is teacher or student? Everything resolves, and the book ends in silence.','The king asks, "Where is the problem? Where is the fear?" He finds none. Then everything is quiet.','20.1']
+];
+const svg=$('#chart'), NS='http://www.w3.org/2000/svg';
+const M={l:40,r:10,t:18,b:36}, W=720,H=300, pw=W-M.l-M.r, ph=H-M.t-M.b, bw=pw/20;
+const y=v=>M.t+ph*(1-v/100);
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+[0,25,50,75,100].forEach(v=>{el('line',{x1:M.l,x2:W-M.r,y1:y(v),y2:y(v),class:'grid'});const t=el('text',{x:M.l-8,y:y(v)+4,'text-anchor':'end'});t.textContent=v;});
+let sel=0;
+const groups=CH.map((c,i)=>{
+  const g=el('g',{class:'barg'}); const x0=M.l+i*bw, w=bw-8, x=x0+4, top=y(c[3]), base=y(0), r=Math.min(4,(base-top)/2);
+  el('path',{d:`M${x},${base} L${x},${top+r} Q${x},${top} ${x+r},${top} L${x+w-r},${top} Q${x+w},${top} ${x+w},${top+r} L${x+w},${base} Z`,fill:c[2]==='A'?'var(--series-a)':'var(--series-j)'},g);
+  const t=el('text',{x:x0+bw/2,y:H-M.b+18,'text-anchor':'middle'},g);t.textContent=c[0];
+  const hit=el('rect',{x:x0,y:M.t,width:bw,height:ph+24,class:'hit',tabindex:0,role:'button','aria-label':`Chapter ${c[0]}, ${c[1]}, ${c[3]} verses`},g);
+  hit.addEventListener('click',()=>pick(i));
+  hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(i)}});
+  hit.addEventListener('pointermove',e=>showTip(e,`<b>Ch. ${c[0]} · ${c[1]}</b><br>${c[2]==='A'?'Ashtavakra':'Janaka'} · ${c[3]} verses`));
+  hit.addEventListener('pointerleave',hideTip);
+  return g;
+});
+const lab=el('text',{x:M.l+17*bw-4,y:y(100)+14,'text-anchor':'end'});lab.textContent='Ch. 18 · 100 verses';
+const tip=$('#tip');
+function showTip(e,h){tip.innerHTML=h;tip.hidden=false;const tw=tip.offsetWidth;let x=e.clientX+14;if(x+tw>innerWidth-8)x=e.clientX-tw-14;tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.hidden=true}
+function renderChap(){const c=CH[sel];
+  $('#chap').innerHTML=`<div class="big">${c[0]}</div><h3>${c[1]}</h3><div class="meta">${c[2]==='A'?'Ashtavakra speaks':'Janaka speaks'} · ${c[3]} verses</div><p>${isKid()?c[5]:c[4]}</p>`;
+  groups.forEach((g,i)=>g.classList.toggle('sel',i===sel));}
+function pick(i){sel=(i+20)%20;renderChap()}
+$('#prevCh').onclick=()=>pick(sel-1);$('#nextCh').onclick=()=>pick(sel+1);
+renderChap();listeners.push(renderChap);
+$('#chTable tbody').innerHTML=CH.map(c=>`<tr><td>${c[0]}</td><td>${c[1]}</td><td>${c[2]==='A'?'Ashtavakra':'Janaka'}</td><td>${c[3]}</td></tr>`).join('');
+
+/* ---------- ocean ---------- */
+const cv=$('#ocean'), cx=cv.getContext('2d'); let oceanMode='wave', mix=0, colors={};
+function readColors(){colors={water:css('--water'),water2:css('--water-2'),ink:css('--ink'),foam:css('--foam'),bg:css('--surface-2'),gold:css('--gold'),sky:css('--sky-2')}}
+readColors(); matchMedia('(prefers-color-scheme: dark)').addEventListener('change',readColors);
+new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','class']});
+const crests=[{x:.14,n:'me',nk:'me'},{x:.32,n:'you',nk:'you'},{x:.5,n:'a tree',nk:'a tree'},{x:.68,n:'a bird',nk:'a cat'},{x:.86,n:'a star',nk:'a star'}];
+function surf(x,t,W){let v=Math.sin(x/W*12+t*1.3)*6+Math.sin(x/W*27-t*2.1)*3;
+  crests.forEach((c,i)=>{const d=(x-c.x*W)/(W*.055);v-=Math.exp(-d*d)*(46+8*Math.sin(t*1.5+i*1.7))*(1-mix*.75)});return v}
+function drawOcean(ts){const t=ts/1000, W=cv.width,H=cv.height, base=H*.58;
+  mix+=((oceanMode==='sea'?1:0)-mix)*.05;
+  cx.fillStyle=colors.bg;cx.fillRect(0,0,W,H);
+  // back layer
+  cx.beginPath();cx.moveTo(0,H);for(let x=0;x<=W;x+=6)cx.lineTo(x,base-30+Math.sin(x/W*9+t*.8)*8);cx.lineTo(W,H);cx.closePath();cx.fillStyle=colors.water2;cx.fill();
+  // front
+  cx.beginPath();cx.moveTo(0,H);for(let x=0;x<=W;x+=4)cx.lineTo(x,base+surf(x,t,W));cx.lineTo(W,H);cx.closePath();cx.fillStyle=colors.water;cx.fill();
+  const a=1-mix;
+  crests.forEach((c,i)=>{const X=c.x*W, Y=base+surf(X,t,W);
+    // outline of this wave
+    cx.globalAlpha=a;cx.strokeStyle=colors.foam;cx.lineWidth=4;cx.beginPath();
+    for(let x=X-W*.08;x<=X+W*.08;x+=3){const yy=base+surf(x,t,W);x===X-W*.08?cx.moveTo(x,yy):cx.lineTo(x,yy)}cx.stroke();
+    // eyes
+    cx.fillStyle=colors.foam;cx.beginPath();cx.arc(X-9,Y+22,5,0,7);cx.arc(X+9,Y+22,5,0,7);cx.fill();
+    cx.fillStyle=colors.ink;cx.beginPath();cx.arc(X-8,Y+23,2.4,0,7);cx.arc(X+10,Y+23,2.4,0,7);cx.fill();
+    cx.font='600 22px Figtree, system-ui, sans-serif';cx.textAlign='center';cx.fillStyle=colors.ink;cx.fillText(isKid()?c.nk:c.n,X,Y-14);
+    cx.globalAlpha=1;});
+  cx.globalAlpha=mix;cx.font='30px Marcellus, Georgia, serif';cx.textAlign='center';cx.fillStyle=colors.foam;cx.fillText(isKid()?'all one big water':'one ocean: all of it water',W/2,base+90);cx.globalAlpha=1;
+  if(!reduce)requestAnimationFrame(drawOcean);
+}
+requestAnimationFrame(drawOcean);
+const oTxt={wave:['Each wave has a name and a shape. Each one worries: "What happens when I fall?"','Every wave thinks: "I\'m me, you\'re you!"'],sea:['Same picture, different view. No wave was ever anything but water.','They were all water the whole time!']};
+function setOcean(m){oceanMode=m;$$('[data-ocean]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ocean===m)));$('#oceanStatus').textContent=oTxt[m][isKid()?1:0];if(reduce){mix=m==='sea'?1:0;requestAnimationFrame(drawOcean)}}
+$$('[data-ocean]').forEach(b=>b.addEventListener('click',()=>setOcean(b.dataset.ocean)));
+setOcean('wave');listeners.push(()=>{setOcean(oceanMode);if(reduce)requestAnimationFrame(drawOcean)});
+
+/* ---------- rope ---------- */
+function rope(){const L=+$('#light').value/100;
+  $('#dark').setAttribute('opacity',(0.82*(1-L)).toFixed(2));
+  $('#snake').setAttribute('opacity',Math.max(0,Math.min(1,(0.55-L)/0.3)).toFixed(2));
+  const r=Math.max(0,Math.min(1,(L-0.45)/0.3));$('#ropeTwist').setAttribute('opacity',r.toFixed(2));$('#ropeEnd').setAttribute('opacity',r.toFixed(2));
+  $('#lampGlow').setAttribute('opacity',L.toFixed(2));
+  const k=isKid();
+  $('#ropeStatus').textContent=L<.35?(k?'Eek! A SNAKE! My heart is going boom-boom!':'A snake! Your heart pounds. The fear is real, even though the snake is not.'):L<.65?(k?'Hmm... is it moving? Let\'s look closer...':'Doubt creeps in. Is it moving? Is it coiled like a rope?'):(k?'Oh! It\'s just a rope! Silly us. All the fear went away.':'Just a rope. Nothing was killed or removed. The snake never existed.');}
+$('#light').addEventListener('input',rope);rope();listeners.push(rope);
+
+/* ---------- pot ---------- */
+const st=$('#stars');for(let i=0;i<70;i++){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',(Math.random()*390+5).toFixed(1));c.setAttribute('cy',(Math.random()*250+5).toFixed(1));c.setAttribute('r',(Math.random()*1.6+.6).toFixed(1));st.appendChild(c)}
+let broken=false;
+function pot(){const k=isKid();$('#pot').classList.toggle('broken',broken);$('#lblIn').setAttribute('opacity',broken?0:1);$('#lblOut').setAttribute('opacity',broken?0:1);$('#lblOne').setAttribute('opacity',broken?1:0);
+  $('#potStatus').textContent=broken?(k?'The pot broke, but the air inside is fine. It was always part of the sky!':'The pot is gone. Did the space inside break, escape or move? No. It was never separate.'):(k?'The pot has air inside. What happens if it breaks?':'The space inside seems to have a shape and a place. Is it really "pot-space"?');}
+$('#breakPot').onclick=()=>{broken=true;pot()};$('#fixPot').onclick=()=>{broken=false;pot()};pot();listeners.push(pot);
+
+/* ---------- sky ---------- */
+const sky=$('#sky');const feelings=[['anger','grumpy'],['worry','scared'],['joy','happy'],['boredom','bored'],['jealousy','jealous'],['pride','show-off'],['sadness','sad'],['excitement','excited']];
+let fi=0;function addCloud(){const f=feelings[fi++%feelings.length];const b=document.createElement('button');b.type='button';b.className='cloud';b.dataset.a=f[0];b.dataset.k=f[1];b.textContent=isKid()?f[1]:f[0];
+  b.style.top=(12+Math.random()*58)+'%';const dur=16+Math.random()*12;b.style.animationDuration=dur+'s';b.style.animationDelay=(-Math.random()*dur)+'s';
+  b.addEventListener('click',()=>{b.classList.add('gone');skyMsg(b);setTimeout(()=>b.remove(),700)});sky.appendChild(b);}
+function skyMsg(b){const k=isKid();$('#skyStatus').textContent=b?(k?`Bye-bye, ${b.dataset.k} cloud! The sky is still here.`:`${b.dataset.a[0].toUpperCase()+b.dataset.a.slice(1)} passed. The sky did not change at all.`):(k?'Clouds come and go. The sky stays.':'Feelings come and go. What notices them stays.');}
+for(let i=0;i<4;i++)addCloud();skyMsg();
+$('#addCloud').onclick=addCloud;listeners.push(()=>{$$('.cloud').forEach(c=>c.textContent=isKid()?c.dataset.k:c.dataset.a);skyMsg()});
+
+/* ---------- rings ---------- */
+const ELS=[['Space','ākāśa','the room you take up','space'],['Air','vāyu','breath','air'],['Fire','agni','body warmth','warmth'],['Water','jala','blood and tears','water'],['Earth','pṛthvī','bones and flesh','body']];
+const rg=$('#ringG'), ringEls=[], removed=new Set();
+ELS.forEach((e,i)=>{const r=128-i*20;const c=document.createElementNS(NS,'circle');c.setAttribute('cx',150);c.setAttribute('cy',150);c.setAttribute('r',r);c.setAttribute('fill','none');
+  c.setAttribute('stroke',['var(--indigo)','var(--water)','var(--gold)','var(--water-2)','var(--pot)'][i]);c.setAttribute('stroke-width',14);c.setAttribute('opacity','.85');c.classList.add('ring');rg.appendChild(c);
+  const t=document.createElementNS(NS,'text');t.setAttribute('x',150);t.setAttribute('y',150-r+4);t.setAttribute('text-anchor','middle');t.textContent=e[0];rg.appendChild(t);ringEls.push([c,t]);});
+const chips=$('#elChips');
+function chipLabel(e){return isKid()?`${e[0]} (${e[3]})`:`${e[0]} · ${e[1]}`}
+ELS.forEach((e,i)=>{const b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed','false');b.textContent=chipLabel(e);
+  b.onclick=()=>{removed.has(i)?removed.delete(i):removed.add(i);b.setAttribute('aria-pressed',String(removed.has(i)));rings()};chips.appendChild(b)});
+const rs=document.createElement('button');rs.type='button';rs.className='chip';rs.textContent='Reset';rs.onclick=()=>{removed.clear();$$('#elChips .chip').forEach(c=>c.setAttribute('aria-pressed','false'));rings()};chips.appendChild(rs);
+function rings(){const k=isKid();ringEls.forEach(([c,t],i)=>{c.classList.toggle('off',removed.has(i));t.style.opacity=removed.has(i)?0:1});
+  const n=removed.size;$('#coreGlow').setAttribute('r',30+n*16);
+  $('#coreTxt').textContent=n===5?(k?'the watcher!':'awareness'):'?';
+  $('#ringStatus').textContent=n===0?(k?'Tap a word to take it away.':'Tap an element to set it aside.'):n<5?(k?`${5-n} left... Who is noticing them go?`:`${5-n} remaining. Notice: something is watching each one go.`):(k?'Everything is gone... but YOU are still here, noticing! That\'s the watcher.':'Every element set aside, and the knowing remains. This is what 1.3 calls the witness, cid-rūpa.');
+  $$('#elChips .chip').forEach((c,i)=>{if(i<5)c.textContent=chipLabel(ELS[i])});}
+rings();listeners.push(rings);
+
+/* ---------- freedom ---------- */
+const MOVES=[['wants','vāñchati','"I want it!"'],['grieves','śocati','"Boo-hoo!"'],['rejects','muñcati','"Go away!"'],['grasps','gṛhṇāti','"Mine! Mine!"'],['is thrilled','hṛṣyati','"I\'m the best!"'],['is angry','kupyati','"Grrr!"']];
+const SIT=[
+ {a:'Praised at work',k:'Teacher says "Great job!"',m:[0,3,4],b:['I need this again. I hope they say it in front of everyone. What if next time they don\'t?','I\'m the best! I want more stars! I\'m going to keep them all!'],f:['It\'s pleasant, and it passes. Enjoy it, thank them, and you need nothing more from it.','Yay! That feels nice. Say thank you, and keep playing.']},
+ {a:'Someone cuts in line',k:'A friend won\'t share',m:[2,5,0],b:['How dare they. You replay it for an hour and it ruins the evening.','Grrr! Go away! I want it NOW!'],f:['Irritation rises and falls. You can still speak up, calmly, without carrying it home.','Feel the grumpy cloud. Then say, "Can I have a turn after you?"']},
+ {a:'Losing a job',k:'Ice-cream falls on the floor',m:[1,0,3],b:['Why me? You cling to what was and dread what\'s next.','Boo-hoo! I want my ice-cream back!'],f:['Sadness is allowed to be fully felt. Underneath it, the one who feels it is untouched, and the next step becomes clear.','It\'s okay to be sad. The sad cloud will float away. Maybe we get a new one another day.']},
+ {a:'Winning an argument',k:'Winning a race',m:[4,3],b:['The rush fades and you start looking for the next win to prove yourself.','I won! I\'m the best! Nobody else is good!'],f:['Joy without gloating. Nothing about who you are depended on it.','Yay, that was fun! Let\'s race again, and help my friend too.']},
+ {a:'Stuck in traffic',k:'Rain on picnic day',m:[5,2,1],b:['Fuming at every red light, as if anger could move the cars.','No rain! Go away, rain! Grrr!'],f:['It is what it is. Put on music. The mind that fights the fact is the only thing suffering.','Rain is rain. Let\'s have a picnic on the living-room floor!']}
+];
+let si=0;
+function freedom(){const k=isKid(),s=SIT[si];
+  $('#situ').innerHTML=SIT.map((x,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===si}">${k?x.k:x.a}</button>`).join('');
+  $$('#situ button').forEach(b=>b.onclick=()=>{si=+b.dataset.i;freedom()});
+  $('#moves').innerHTML=MOVES.map((m,i)=>`<div class="move ${s.m.includes(i)?'on':''}"><b>${k?m[2]:'Mind '+m[0]}</b><span class="iast">${m[1]}</span></div>`).join('');
+  $('#boundTxt').textContent=s.b[k?1:0];$('#freeTxt').textContent=s.f[k?1:0];}
+freedom();listeners.push(freedom);
+
+/* ---------- verses ---------- */
+const V=[
+ ['1.1','J','Janaka asks','कथं ज्ञानमवाप्नोति कथं मुक्तिर्भविष्यति।<br>वैराग्यं च कथं प्राप्तमेतद् ब्रूहि मम प्रभो॥','kathaṃ jñānam avāpnoti kathaṃ muktir bhaviṣyati | vairāgyaṃ ca kathaṃ prāptam etad brūhi mama prabho ||','How does one gain knowledge? How does freedom come? How is dispassion reached? Tell me this, master.','"Teacher, how can I be wise, free and calm?"'],
+ ['1.2','A','The ethical ground','मुक्तिमिच्छसि चेत्तात विषयान्विषवत्त्यज।<br>क्षमार्जवदयातोषसत्यं पीयूषवद्भज॥','muktim icchasi cet tāta viṣayān viṣavat tyaja | kṣamārjava-dayā-toṣa-satyaṃ pīyūṣavad bhaja ||','If you want freedom, my child, treat cravings of the senses like poison. Drink forgiveness, honesty, kindness, contentment and truth like nectar.','Being kind, honest and forgiving is like yummy medicine.'],
+ ['1.3','A','You are the witness','न पृथ्वी न जलं नाग्निर्न वायुर्द्यौर्न वा भवान्।<br>एषां साक्षिणमात्मानं चिद्रूपं विद्धि मुक्तये॥','na pṛthvī na jalaṃ nāgnir na vāyur dyaur na vā bhavān | eṣāṃ sākṣiṇam ātmānaṃ cidrūpaṃ viddhi muktaye ||','You are not earth, water, fire, air or sky. To be free, know yourself as awareness, the witness of all these.','You are not just your body. You are the one who notices.'],
+ ['1.8','A','The doer illusion','अहं कर्तेत्यहंमानमहाकृष्णाहिदंशितः।<br>नाहं कर्तेति विश्वासामृतं पीत्वा सुखी भव॥','ahaṃ karteti ahaṃmāna-mahākṛṣṇāhi-daṃśitaḥ | nāhaṃ karteti viśvāsāmṛtaṃ pītvā sukhī bhava ||','Bitten by the great black snake of the pride "I am the doer", drink the nectar of trust, "I am not the doer", and be happy.','You don\'t have to carry the whole world on your back. Relax!'],
+ ['1.11','A','As you think','मुक्ताभिमानी मुक्तो हि बद्धो बद्धाभिमान्यपि।<br>किंवदन्तीह सत्येयं या मतिः सा गतिर्भवेत्॥','muktābhimānī mukto hi baddho baddhābhimāny api | kiṃvadantīha satyeyaṃ yā matiḥ sā gatir bhavet ||','Think yourself free and you are free. Think yourself bound and you stay bound. The old saying is true: as you think, so you become.','If you think "I\'m stuck", you feel stuck. If you think "I\'m free", you feel free!'],
+ ['1.15','A','Even practice can bind','निःसङ्गो निष्क्रियोऽसि त्वं स्वप्रकाशो निरञ्जनः।<br>अयमेव हि ते बन्धः समाधिमनुतिष्ठसि॥','niḥsaṅgo niṣkriyo\'si tvaṃ svaprakāśo nirañjanaḥ | ayam eva hi te bandhaḥ samādhim anutiṣṭhasi ||','You are unattached, actionless, self-shining and spotless. Your bondage is just this: you keep practising to reach a special state.','You don\'t have to try super hard to be good inside. You already shine.'],
+ ['2.1','J','Janaka wakes up','अहो निरञ्जनः शान्तो बोधोऽहं प्रकृतेः परः।<br>एतावन्तमहं कालं मोहेनैव विडम्बितः॥','aho nirañjanaḥ śānto bodho\'haṃ prakṛteḥ paraḥ | etāvantam ahaṃ kālaṃ mohenaiva viḍambitaḥ ||','Wonder! I am spotless, at peace, pure awareness, beyond nature. All this time I have been fooled by delusion.','"Wow! I was okay all along, and I never knew!"'],
+ ['2.4','J','Waves and water','यथा न तोयतो भिन्नास्तरङ्गाः फेनबुद्बुदाः।<br>आत्मनो न तथा भिन्नं विश्वमात्मविनिर्गतम्॥','yathā na toyato bhinnās taraṅgāḥ phena-budbudāḥ | ātmano na tathā bhinnaṃ viśvam ātma-vinirgatam ||','Waves, foam and bubbles are not different from water. So this world, flowing out of the Self, is not different from the Self.','Waves and bubbles are all just water. Everything is one big ocean.'],
+ ['2.7','J','Rope and snake','आत्माज्ञानाज्जगद्भाति आत्मज्ञानान्न भासते।<br>रज्ज्वज्ञानादहिर्भाति तज्ज्ञानाद्भासते न हि॥','ātmājñānāj jagad bhāti ātmajñānān na bhāsate | rajjv-ajñānād ahir bhāti taj-jñānād bhāsate na hi ||','Not knowing the Self, the world appears as separate; knowing it, that appearance ends. Not knowing the rope, a snake appears; knowing it, the snake is gone.','In the dark a rope looks like a snake. Turn on the light: just a rope!'],
+ ['6.1','A','Space and the pot','आकाशवदनन्तोऽहं घटवत्प्राकृतं जगत्।<br>इति ज्ञानं तथैतस्य न त्यागो न ग्रहो लयः॥','ākāśavad ananto\'haṃ ghaṭavat prākṛtaṃ jagat | iti jñānaṃ tathaitasya na tyāgo na graho layaḥ ||','I am endless like space; the world is like a pot. This is knowledge, and then there is nothing to give up, nothing to grab, nothing to destroy.','You are as big as the sky. The world is a little pot inside you.'],
+ ['7.1','J','The ship on the ocean','मय्यनन्तमहाम्भोधौ विश्वपोत इतस्ततः।<br>भ्रमति स्वान्तवातेन न ममास्त्यसहिष्णुता॥','mayy ananta-mahāmbhodhau viśva-pota itas tataḥ | bhramati svānta-vātena na mamāsty asahiṣṇutā ||','In me, the endless ocean, the ship of the world drifts this way and that on its own winds. I am not troubled.','Let the little boat bob on the waves. The ocean doesn\'t mind.'],
+ ['8.1','A','What bondage is','तदा बन्धो यदा चित्तं किञ्चिद्वाञ्छति शोचति।<br>किञ्चिन्मुञ्चति गृह्णाति किञ्चिद्धृष्यति कुप्यति॥','tadā bandho yadā cittaṃ kiñcid vāñchati śocati | kiñcin muñcati gṛhṇāti kiñcid dhṛṣyati kupyati ||','It is bondage when the mind wants something, grieves over something, rejects something, holds on to something, is thrilled by something or angry at something.','Sticky hands: grabbing, pushing, whining, showing off, getting cross.'],
+ ['8.4','A','The root','यदा नाहं तदा मोक्षो यदाहं बन्धनं तदा।<br>मत्वेति हेलया किञ्चिन्मा गृहाण विमुञ्च मा॥','yadā nāhaṃ tadā mokṣo yadāhaṃ bandhanaṃ tadā | matveti helayā kiñcin mā gṛhāṇa vimuñca mā ||','When there is no "I", there is freedom. When there is "I", there is bondage. Knowing this, lightly, grab nothing and push nothing away.','Less "ME, ME, ME!" means more happy.'],
+ ['16.11','A','Forget everything','हरो यद्युपदेष्टा ते हरिः कमलजोऽपि वा।<br>तथापि न तव स्वास्थ्यं सर्वविस्मरणादृते॥','haro yady upadeṣṭā te hariḥ kamalajo\'pi vā | tathāpi na tava svāsthyaṃ sarva-vismaraṇād ṛte ||','Even if Shiva, Vishnu or Brahma were your teacher, you would not rest in yourself until you forgot everything.','Even the best teacher can\'t do it for you. Just relax and be.'],
+ ['18.1','A','The final salutation','यस्य बोधोदये तावत्स्वप्नवद्भवति भ्रमः।<br>तस्मै सुखैकरूपाय नमः शान्ताय तेजसे॥','yasya bodhodaye tāvat svapnavad bhavati bhramaḥ | tasmai sukhaikarūpāya namaḥ śāntāya tejase ||','Bow to That which is happiness itself, peace and light. When it is known, all delusion becomes like a dream.','When you wake up inside, scary things feel like just a dream.']
+];
+$('#verseList').innerHTML=V.map(v=>`<article class="verse"><div class="ref"><span><b>${v[0]}</b> · ${v[2]}</span><span>${v[1]}</span></div><div class="dev">${v[3]}</div><div class="iast">${v[4]}</div><p class="tr">${v[5]}</p><p class="kidline">${v[6]}</p></article>`).join('');
+$('h2.a',$('#verses'));
+const vs=$('#verses');
+$('#sktToggle').onclick=e=>{const b=e.currentTarget;const on=b.getAttribute('aria-pressed')==='true';b.setAttribute('aria-pressed',String(!on));b.textContent=on?'Show Sanskrit':'Hide Sanskrit';vs.classList.toggle('hide-skt',on)};
+
+/* ---------- try ---------- */
+const PR=[['Sit comfortably. Let your eyes rest.','Sit still like a statue. Close your eyes.'],['Notice a sound. Don\'t name it. Just notice that it is heard.','Listen... can you hear a sound?'],['Who, or what, is hearing? Look for the hearer.','Who is hearing it? That\'s the watcher!'],['A thought arrives. Watch it pass like a car on a road.','A thought pops up, like a bubble. Pop!'],['Did the one who noticed come and go with the thought?','The bubble went away. Did YOU go away? No!'],['Rest as that. Nothing to do. Nothing to fix.','Just be the quiet sky. Nothing to do.']];
+let timer=null,left=60;
+function showPrompt(){const i=Math.min(5,Math.floor((60-left)/10));$('#prompt').textContent=left===60&&!timer?(isKid()?'Press start, and be very still...':'Press start. Follow each line for ten seconds.'):left<=0?(isKid()?'Well done! The watcher is always with you.':'That quiet knowing was here the whole time. It is here now.'):PR[i][isKid()?1:0];
+  $('#secs').textContent=Math.max(0,left);$('#ring').setAttribute('stroke-dashoffset',(326.7*(left/60)).toFixed(1));}
+$('#startTry').onclick=()=>{if(timer)return;if(left<=0)left=60;timer=setInterval(()=>{left--;showPrompt();if(left<=0){clearInterval(timer);timer=null}},1000);showPrompt()};
+$('#resetTry').onclick=()=>{clearInterval(timer);timer=null;left=60;showPrompt()};
+showPrompt();listeners.push(showPrompt);
+
+/* ---------- bedtime narration ---------- */
+const au=$('#narr'), items=$$('.steps li'), PLAY='M7 4.5v15l13-7.5z', PAUSE='M6 4h4.5v16H6zM13.5 4H18v16h-4.5z';
+let cur=-1;
+items.forEach((li,i)=>{const b=document.createElement('button');b.type='button';b.className='sbtn';b.setAttribute('aria-label',`Play step ${i+1}`);
+  b.innerHTML=`<svg viewBox="0 0 24 24"><path d="${PLAY}"/></svg>`;b.onclick=()=>{if(cur!==i)return playStep(i);if(!au.paused)return au.pause();au.ended?playStep(i):au.play().catch(()=>{})};li.appendChild(b)});
+function playStep(i){cur=i;au.src=`audio/step-${i+1}.mp3`;au.play().catch(()=>{});sync()}
+function sync(){const playing=!au.paused&&!au.ended;
+  $('#pIcon').innerHTML=`<path d="${playing?PAUSE:PLAY}"/>`;$('#pPlay').setAttribute('aria-label',playing?'Pause':'Play the bedtime story');
+  items.forEach((li,i)=>{li.classList.toggle('playing',i===cur&&cur>=0);li.querySelector('.sbtn svg').innerHTML=`<path d="${i===cur&&playing?PAUSE:PLAY}"/>`});
+  $('#pNow').textContent=cur<0?'Listen to the story · about 2½ minutes':`Step ${cur+1} of ${items.length}${playing?'':' · paused'}`;}
+let waitNext=false;
+$('#pPlay').onclick=()=>{if(cur<0)return playStep(0);if(waitNext){waitNext=false;return playStep(cur+1)}au.paused?au.play().catch(()=>{}):au.pause()};
+au.addEventListener('play',sync);au.addEventListener('pause',sync);
+au.addEventListener('playing',()=>{const li=items[cur];const r=li.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight)li.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'})});
+au.addEventListener('timeupdate',()=>{if(cur<0||!au.duration)return;$('#pBar').style.width=((cur+au.currentTime/au.duration)/items.length*100).toFixed(1)+'%'});
+au.addEventListener('ended',()=>{
+  if(cur===items.length-1){cur=-1;sync();$('#pNow').textContent='Goodnight. Press play to hear it again.';return}
+  if($('#pStepwise').checked){waitNext=true;sync();$('#pNow').textContent=`Step ${cur+1} done · press play for step ${cur+2}`;return}
+  playStep(cur+1)});
+au.addEventListener('play',()=>{waitNext=false});
+
+/* ---------- Osho comparison ---------- */
+$('#dotsT').innerHTML='<i></i><i class="half"></i>';
+$('#dotsO').innerHTML='<i></i>'.repeat(140);
+
+/* talk map: [talk, first chapter, last chapter, verse range] ; even talks are Q&A */
+const TV={1:[1,1,'1.1–1.6'],3:[1,1,'1.7–1.13'],5:[1,1,'1.14–1.20'],7:[2,2,'2.1–2.7'],9:[2,2,'2.8–2.14'],11:[2,2,'2.15–2.20'],13:[2,2,'2.21–2.25'],15:[3,3,'3.1–3.7'],17:[3,3,'3.8–3.14'],19:[4,4,'4.1–4.6'],21:[5,6,'5.1–6.4'],23:[7,7,'7.1–7.5'],25:[8,8,'8.1–8.4'],27:[9,9,'9.1–9.8'],29:[10,10,'10.1–10.8'],31:[11,11,'11.1–11.8'],33:[12,12,'12.1–12.8'],35:[13,13,'13.1–13.7'],37:[14,14,'14.1–14.4'],39:[15,15,'15.1–15.7'],41:[15,15,'15.8–15.13'],43:[15,15,'15.14–15.20'],45:[16,16,'16.1–16.6'],47:[16,16,'16.7–16.11'],49:[17,17,'17.1–17.7'],51:[17,17,'17.8–17.13'],53:[17,17,'17.14–17.20'],55:[18,18,'18.1–18.7'],57:[18,18,'18.8–18.13'],59:[18,18,'18.14–18.20'],61:[18,18,'18.21–18.27'],63:[18,18,'18.28–18.33'],65:[18,18,'18.34–18.39'],67:[18,18,'18.40–18.44'],69:[18,18,'18.45–18.50'],71:[18,18,'18.51–18.57'],73:[18,18,'18.58–18.63'],75:[18,18,'18.64–18.69'],77:[18,18,'18.70–18.74'],79:[18,18,'18.75–18.81'],81:[18,18,'18.82–18.87'],83:[18,18,'18.88–18.93'],85:[18,18,'18.94–18.100'],87:[19,19,'19.1–19.8'],89:[20,20,'20.1–20.7'],91:[20,20,'20.8–20.14']};
+let selCh=1;
+const talkUrl=n=>`https://oshoworld.com/ashtavakra-maha-geeta-${String(n).padStart(2,'0')}`;
+function inCh(n,c){const t=TV[n];return t&&c>=t[0]&&c<=t[1]}
+function tmap(){const k=isKid();
+  $('#chChips').innerHTML=CH.map(c=>`<button type="button" data-c="${c[0]}" aria-pressed="${c[0]===selCh}" title="${c[1]}">${c[0]}</button>`).join('');
+  $$('#chChips button').forEach(b=>b.onclick=()=>{selCh=+b.dataset.c;tmap()});
+  let h='';for(let n=1;n<=91;n++){const v=TV[n];h+=`<a class="tcell ${v?'v':'q'} ${inCh(n,selCh)?'on':''}" href="${talkUrl(n)}" target="_blank" rel="noopener" title="Talk ${n}: ${v?'verses '+v[2]:'questions and answers'}"><b>${n}</b><span>${v?v[2]:'Q&A'}</span></a>`;}
+  $('#tmap').innerHTML=h;
+  const c=CH[selCh-1],list=Object.keys(TV).map(Number).filter(n=>inCh(n,selCh));
+  const hrs=(list.length*1.5).toLocaleString();
+  $('#guide').innerHTML=k
+    ?`<p><b>Chapter ${selCh}: ${c[1]}</b>. Osho has ${list.length} poem talk${list.length>1?'s':''} about it: ${list.map(n=>`<a href="${talkUrl(n)}" target="_blank" rel="noopener">talk ${n}</a>`).join(', ')}.</p>`
+    :`<p><b>Chapter ${selCh} · ${c[1]}</b> · ${c[3]} verses · ${list.length} verse talk${list.length>1?'s':''}, about ${hrs} hours.</p><ul>${list.map(n=>`<li><a href="${talkUrl(n)}" target="_blank" rel="noopener">Talk ${n}</a> · verses ${TV[n][2]}${n+1<=91?` <span class="muted">· then talk ${n+1}, questions</span>`:''}</li>`).join('')}</ul><p class="muted" style="font-size:.85rem">Links open the talk's page on oshoworld.com, with the Hindi audio and transcript.</p>`;
+}
+tmap();listeners.push(tmap);
+
+/* who appears: talks out of 90 */
+(function(){const W=[['Buddha',88,0],['Mahavira',78,0],['Krishna',72,0],['Mulla Nasruddin',64,0],['Jesus',63,0],['Janaka',52,1],['Kabir',46,0],['Zen masters',43,0],['Lao Tzu',31,0],['Sufis',29,0],['Patanjali',27,0],['J. Krishnamurti',27,0],['Meera',27,0],['Ramakrishna',19,0]];
+  const s=$('#who'),L=150,R=600,T=24,RH=31,x=v=>L+v/90*(R-L);
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+  [0,30,60,90].forEach(v=>{mk('line',{x1:x(v),x2:x(v),y1:T-6,y2:T+RH*W.length,stroke:'var(--line)'});const t=mk('text',{x:x(v),y:T-10,'text-anchor':'middle',fill:'var(--muted)','font-size':12,'font-family':'Figtree,sans-serif'});t.textContent=v;});
+  W.forEach((w,i)=>{const y=T+i*RH+4,h=RH-10,xe=x(w[1]);
+    const lb=mk('text',{x:L-10,y:y+h/2+5,'text-anchor':'end',fill:'var(--ink)','font-size':13,'font-family':'Figtree,sans-serif'});lb.textContent=w[0];
+    const r=Math.min(4,h/2);
+    const p=mk('path',{d:`M${L},${y} L${xe-r},${y} Q${xe},${y} ${xe},${y+r} L${xe},${y+h-r} Q${xe},${y+h} ${xe-r},${y+h} L${L},${y+h} Z`,fill:w[2]?'var(--series-a)':'var(--series-j)'});
+    const ti=document.createElementNS(NS,'title');ti.textContent=`${w[0]}: named in ${w[1]} of 90 talks`;p.appendChild(ti);
+    const v=mk('text',{x:xe+6,y:y+h/2+5,fill:'var(--ink)','font-size':12,'font-family':'Figtree,sans-serif','font-weight':600});v.textContent=w[1];});
+})();
+
+const SC=[['Faithful to the text','Stays with what the verses say',5,3],['Time needed (less is better)','An evening vs. weeks of listening',5,1],['Easy for a beginner','Can you follow it with no background?',2,4],['Brings it alive','Stories, humour, urgency',2,5],['Help for daily life','Concrete examples and practice',2,4],['Free of side-agendas','No ranking of other teachers',5,2],['Explaining it to a child','Short images you can retell',4,2]];
+(function(){const s=$('#score'),L=250,R=610,T=40,RH=40,x=v=>L+(v-1)/4*(R-L);
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
+  for(let v=1;v<=5;v++){mk('line',{x1:x(v),x2:x(v),y1:T-10,y2:T+RH*SC.length-14,class:'gl'});const t=mk('text',{x:x(v),y:T-18,'text-anchor':'middle',class:'tick'});t.textContent=v;}
+  SC.forEach((c,i)=>{const y=T+i*RH+8;
+    const a=mk('text',{x:0,y:y-3});a.textContent=c[0];const b=mk('text',{x:0,y:y+13,class:'tick'});b.textContent=c[1];
+    if(c[2]!==c[3])mk('line',{x1:x(c[2]),x2:x(c[3]),y1:y,y2:y,stroke:'var(--line)','stroke-width':4,'stroke-linecap':'round'});
+    [[c[2],'var(--series-a)','Ashtavakra Gita'],[c[3],'var(--series-j)','Osho\'s Mahageeta']].forEach(d=>{const g=mk('circle',{cx:x(d[0]),cy:y,r:8,fill:d[1],stroke:'var(--surface)','stroke-width':2});
+      const ti=document.createElementNS(NS,'title');ti.textContent=`${c[0]}: ${d[2]} ${d[0]}/5`;g.appendChild(ti);});
+  });
+})();
+
+const GOALS=[
+ {a:'I want to understand the teaching exactly',k:'I want to know the real secret',win:'The original',why:['Every idea is in the 298 verses, and nothing is added. Read a translation with the Sanskrit beside it, and use this page for the pictures.','The little book has the real secret in it. Ask a grown-up to read you a few lines.']},
+ {a:'I want to feel it, not just know it',k:'I want to feel happy and calm',win:'Osho',why:['This is where Osho is unmatched. Pick a chapter in the talk map above and listen to its verse talks. Talks 1, 5 and 25 are good first choices.','Osho tells lots of stories that make you feel the secret inside.']},
+ {a:'I want to explain it to my child',k:'I want to tell my friends',win:'The original',why:['Children need short, concrete images (wave, rope, pot, sky), and those come straight from the verses. Osho is long and written for adults. Use the bedtime story on this page.','The short pictures from the little book are easiest to share: waves, rope, pot and sky.']},
+ {a:'I want something to practise every day',k:'I want a game to play every day',win:'Both, carefully',why:['The text gives no method, on purpose (1.15). Osho offers many, but remember the text\'s warning: practice helps only if you don\'t treat it as a ladder to a freedom you lack. Try the one-minute witness exercise on this page.','Play the Watcher Game for one minute each day. No need to be perfect!']},
+ {a:'I only have 15 minutes a day',k:'I only have a little time',win:'The original',why:['At 15 minutes a day you finish the whole text in about a week. At the same pace, the full Osho series takes over a year.','The little book is short. You can hear a bit every night.']}
+];
+let gi=0;
+function goals(){const k=isKid();$('#goals').innerHTML=GOALS.map((g,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===gi}">${k?g.k:g.a}</button>`).join('');
+  $$('#goals button').forEach(b=>b.onclick=()=>{gi=+b.dataset.i;goals()});
+  const g=GOALS[gi];$('#pick').innerHTML=`<span class="eyebrow">${k?'Best choice':'Recommended'}</span><span class="win">${k?({'The original':'The little book','Osho':'The stories','Both, carefully':'Both!'})[g.win]:g.win}</span><p>${g.why[k?1:0]}</p>`;}
+goals();listeners.push(goals);
+
+/* ---------- glossary ---------- */
+const G=[
+ ['ātman','AHT-mun','The Self: what you really are, beneath body and mind.','The real you inside.'],
+ ['sākṣī','SAAK-shee','The witness. Awareness that observes everything and is changed by nothing.','The watcher.'],
+ ['cit','chit','Pure consciousness, the "light" by which anything is known.','The light inside that lets you know things.'],
+ ['mokṣa / mukti','MOHK-sha','Liberation; freedom from the sense of being bound.','Feeling free, like a bird.'],
+ ['bandha','BUN-dha','Bondage: the mind\'s grasping and rejecting, rooted in "I".','Feeling stuck, like sticky hands.'],
+ ['ahaṃkāra','uh-hum-KAA-ra','"The I-maker": the ego, the sense "I am the doer".','The voice that shouts "ME!"'],
+ ['advaita','ad-VAI-ta','"Not two". Reality is one; self and world are not separate.','Everything is one big ocean.'],
+ ['saṃsāra','sum-SAA-ra','The endless cycle of wanting, getting, losing and wanting again.','The merry-go-round of wanting.'],
+ ['nirveda / vairāgya','neer-VAY-da','Dispassion: a calm indifference to the pull of things.','Not being grabby.'],
+ ['bhrama / moha','BHRUM-a','Delusion, like seeing a snake in a rope.','A trick of the dark.'],
+ ['laya','LUH-ya','Dissolution, melting the sense of separateness (chapter 5).','Melting, like sugar in water.'],
+ ['jīvanmukta','JEEV-un-mook-ta','One who is free while still living and acting in the world (chapter 18).','Someone who is free and happy right now.']
+];
+function gloss(){const k=isKid();$('#gloss').innerHTML=G.map(g=>`<div class="term"><span class="w">${g[0]}</span><span class="say">say: ${g[1]}</span><span>${k?g[3]:g[2]}</span></div>`).join('')}
+gloss();listeners.push(gloss);
+})();
+</script>

@@ -1,0 +1,137 @@
+<title>Bedtime Narrator Test</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a single listening column; voices grouped by women's and men's voices, names hidden until revealed. Same palette as the Ashtavakra Gita guide. */
+:root{
+  --bg:#EDF0F5; --surface:#F8F9FC; --surface-2:#E2E7F0; --ink:#18203A; --muted:#556080; --line:#CDD3E0;
+  --accent:#9A600A; --gold:#B8770F; --indigo:#3D4FA8; --pick:#FFF3DA;
+  --f-display:"Marcellus","Cormorant Garamond",Georgia,serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1122; --surface:#151B33; --surface-2:#1C2442; --ink:#E7E9F3; --muted:#9AA2BF; --line:#2A3352;
+  --accent:#E3A642; --gold:#C2861E; --indigo:#8C9CF0; --pick:#2A2516; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0D1122; --surface:#151B33; --surface-2:#1C2442; --ink:#E7E9F3; --muted:#9AA2BF; --line:#2A3352;
+  --accent:#E3A642; --gold:#C2861E; --indigo:#8C9CF0; --pick:#2A2516; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.6}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 56px;display:grid;gap:28px}
+h1,h2{font-family:var(--f-display);font-weight:400;margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(2rem,6vw,2.8rem)}
+h2{font-size:1.5rem}
+p{margin:0}
+.eyebrow{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.muted{color:var(--muted)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.intro{display:grid;gap:10px;max-width:64ch}
+.script{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:1.02rem}
+.script b{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer;font:inherit;font-weight:600}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.group{display:grid;gap:12px}
+.group-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px}
+.voices{display:grid;gap:12px}
+.voice{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center}
+.voice.picked{background:var(--pick);border-color:var(--gold)}
+.letter{grid-row:span 2;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-size:1.5rem;background:var(--surface-2)}
+.picked .letter{background:var(--gold);color:#fff}
+.name{font-weight:700;font-size:1.05rem}
+.name small{font-weight:500;color:var(--muted);font-size:.88rem;margin-left:6px}
+audio{width:100%;height:40px;grid-column:2/3}
+.pickbtn{grid-row:span 2;align-self:center}
+.picked .pickbtn{background:var(--gold);border-color:var(--gold);color:#fff}
+.facts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.facts span{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.facts .now{border-color:var(--indigo);color:var(--indigo)}
+@media (max-width:560px){.voice{grid-template-columns:auto minmax(0,1fr)}.pickbtn{grid-row:auto;grid-column:1/-1;justify-self:start}audio{grid-column:1/-1}}
+.result{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:8px}
+.notes{display:grid;gap:12px}
+.notes div{border-left:3px solid var(--line);padding-left:14px}
+.notes b{display:block}
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <span class="eyebrow">For the Ashtavakra Gita bedtime story</span>
+    <h1>Bedtime Narrator Test</h1>
+    <p class="muted">Open-source voices, women's and men's, read the same opening lines at the same volume. The names are hidden so you judge by ear alone. Listen, pick the one you would want to fall asleep to, then reveal the names.</p>
+  </header>
+
+  <div class="script"><b>What every voice reads (step 1 of the story)</b>Once upon a time, there was a little boy whose body was bent in eight places. Some people laughed at him. But he was the wisest person in the whole kingdom. Here's a question. Is a bendy banana any less yummy than a straight one?</div>
+
+  <div class="bar">
+    <span class="muted">Tip: use headphones, and listen at bedtime volume.</span>
+    <button class="btn primary" type="button" id="reveal" aria-pressed="false">Reveal names</button>
+  </div>
+
+  <div id="groups"></div>
+
+  <div class="result" id="result" aria-live="polite"></div>
+
+  <section class="notes">
+    <h2>About this test</h2>
+    <div><b>Every clip says the words correctly.</b><span class="muted">Each one was transcribed by an independent speech-recognition model (Whisper) and matched the script word for word.</span></div>
+    <div><b>Voices that copy another voice.</b><span class="muted">Chatterbox and Fish Audio copy the voice of a short sample recording. To avoid copying any real person, each was given a synthetic Kokoro voice as its sample, and brings its own rhythm and expression to it.</span></div>
+    <div><b>About the Fish Audio voices.</b><span class="muted">Fish Audio S2 Pro takes spoken-style instructions inside the text, such as "soft, slow, gentle bedtime storyteller" or "warm, deep, unhurried audiobook narrator". It chooses its own pause lengths, so its clips are shorter; the other voices have fixed silences added. Its license allows free personal and non-commercial use only.</span></div>
+    <div><b>Not included.</b><span class="muted">Step Audio EditX also ranks highly on public listening tests, but it needs a graphics card to run at a usable speed.</span></div>
+  </section>
+</div>
+
+<script>
+(function(){
+const KOK=['Kokoro-82M','Apache 2.0 license','82 million parameters'];
+const FISH=['Fish Audio S2 Pro','free for personal, non-commercial use','about 4 billion parameters','takes about 20 minutes per clip here'];
+const CB=['Chatterbox Turbo','MIT license','350 million parameters'];
+const GROUPS=[
+ {title:"Women's voices",note:'Six voices, softer bedtime style',voices:[
+  {id:'chatterbox-heart',name:'Chatterbox Turbo · Heart-style',sub:'copies the Heart voice',facts:CB},
+  {id:'fish-s2-heart',name:'Fish Audio S2 Pro · Heart-style',sub:'copies Heart, told to read as a gentle bedtime storyteller',facts:FISH},
+  {id:'kokoro-heart',name:'Kokoro · Heart',sub:'American, warm',facts:KOK,now:true},
+  {id:'chatterbox-emma',name:'Chatterbox Turbo · Emma-style',sub:'copies the Emma voice',facts:CB},
+  {id:'kokoro-emma',name:'Kokoro · Emma',sub:'British, gentle',facts:KOK},
+  {id:'kokoro-bella',name:'Kokoro · Bella',sub:'American, bright',facts:KOK}]},
+ {title:"Men's voices",note:'Audiobook narrator style',voices:[
+  {id:'kokoro-george',name:'Kokoro · George',sub:'British, mature',facts:KOK},
+  {id:'kokoro-onyx',name:'Kokoro · Onyx',sub:'American, deep',facts:KOK},
+  {id:'kokoro-fable',name:'Kokoro · Fable',sub:'British, storyteller',facts:KOK},
+  {id:'kokoro-michael',name:'Kokoro · Michael',sub:'American, warm',facts:KOK},
+  {id:'kokoro-daniel',name:'Kokoro · Daniel',sub:'British, calm',facts:KOK},
+  {id:'kokoro-fenrir',name:'Kokoro · Fenrir',sub:'American, strong',facts:KOK}]}
+];
+// fixed letters, so a letter means the same clip for everyone who opens this page
+const ALL=[];let n=0;
+GROUPS.forEach(g=>g.voices.forEach(v=>{v.letter='ABCDEFGHIJKLMNOP'[n++];ALL.push(v);}));
+let revealed=false,picked=null;
+const $=s=>document.querySelector(s);
+const AUD={};
+ALL.forEach(v=>{const a=document.createElement('audio');a.controls=true;a.preload='none';a.src=`samples/${v.id}.mp3`;
+  a.setAttribute('aria-label',`Voice ${v.letter}`);
+  a.addEventListener('play',()=>Object.values(AUD).forEach(o=>{if(o!==a)o.pause()}));AUD[v.id]=a;});
+function card(v){const p=picked===v.id;
+  return `<article class="voice ${p?'picked':''}">
+    <span class="letter" aria-hidden="true">${v.letter}</span>
+    <span class="name">Voice ${v.letter}${revealed?`<small>${v.name} · ${v.sub}</small>`:''}</span>
+    <button type="button" class="btn pickbtn" data-id="${v.id}" aria-pressed="${p}">${p?'Your pick':'Pick this one'}</button>
+    <span class="aslot" data-id="${v.id}"></span>
+    ${revealed?`<div class="facts">${v.now?'<span class="now">used on the page now</span>':''}${v.facts.map(f=>`<span>${f}</span>`).join('')}</div>`:''}
+  </article>`}
+function render(){
+  $('#groups').innerHTML=GROUPS.map(g=>`<section class="group"><div class="group-head"><h2>${g.title}</h2><span class="muted">${g.note}</span></div><div class="voices">${g.voices.map(card).join('')}</div></section>`).join('<div style="height:20px"></div>');
+  document.querySelectorAll('.aslot').forEach(s=>s.replaceWith(AUD[s.dataset.id]));
+  document.querySelectorAll('.pickbtn').forEach(b=>b.onclick=()=>{picked=b.dataset.id;render()});
+  const r=$('#result');const v=ALL.find(x=>x.id===picked);
+  if(!v){r.innerHTML='<b>No pick yet</b><span class="muted">Choose the voice you like best, then reveal the names.</span>';}
+  else r.innerHTML=revealed?`<b>Your pick: Voice ${v.letter}, ${v.name}</b><span class="muted">Tell Claude "${v.name}" and the whole bedtime story will be re-recorded in this voice.${v.now?' This is the voice the page already uses, so nothing needs to change.':''}</span>`
+      :`<b>Your pick: Voice ${v.letter}</b><span class="muted">Press "Reveal names" to see which voice it is.</span>`;
+  $('#reveal').textContent=revealed?'Hide names':'Reveal names';$('#reveal').setAttribute('aria-pressed',String(revealed));
+}
+$('#reveal').onclick=()=>{revealed=!revealed;render()};
+render();
+})();
+</script>
